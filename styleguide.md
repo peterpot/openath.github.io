@@ -6,4 +6,4 @@ permalink: /styleguide/
 
 #Style Guide
 
-Now for some markdown.
+Will use this page in the first day or two for some authoring tips, then bump it down to a sub menu.
