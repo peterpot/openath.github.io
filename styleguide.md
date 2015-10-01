@@ -2,6 +2,7 @@
 title:  Style guide for web site
 layout: default
 permalink: /styleguide/
+tags: styleguide
 ---
 
 #Style Guide
