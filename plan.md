@@ -2,6 +2,7 @@
 title:  Project Plan
 layout: default
 permalink: /plan/
+tags: plan
 ---
 
 #Project Plan
