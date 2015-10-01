@@ -2,6 +2,7 @@
 title:  Volunteer
 layout: default
 permalink: /volunteer/
+tags: volunteer
 ---
 
 #Call for volunteers
