@@ -7,12 +7,14 @@ tags: plan
 
 #Project Plan
 
-This is an outline project plan.  It can be collaboratively edited.  
+This is an outline project plan, covering roughly October to May 2015-16 (our funded period).  We're fleshing it out in October.  We aim to produce public requirements documents on which anyone can comment.
 
-#FIWARE obligations and phsaes
-Phase 2 is to deliver a technical design and business plan by 22nd November.  We then hope to get the nod to continue
+#FIWARE obligations and phases
+The programme we have been accepted into has strict timescales and targets to secure continued funding.
 
-Phase 3 is the main build, December to April.  We aim to build most aspects of the system.  
+Phase 2 is to deliver a technical design and business plan by 22nd November.  We then hope to 'get the nod' to continue into development from 1st December.
+
+Phase 3 is the main build, December to April.  We aim to build most aspects of the system, while running events almost weekly. 
 
 Phase 4, if we get that far, is for "market testing and tuning"
 
@@ -34,7 +36,7 @@ We aim to have open reference data, with unique IDs, on at least
 
  The system must have a process for vetting and matching incoming data.  Some items wil be obviously new, some possibly duplicates that go in a 'holding area'.
 
- It should be possible to delegate the work of adding data to specific teams.
+In future, the database should be crodwsourced, letting people contribute local information.  It should be possible to delegate the work of adding data to specific teams or volunteers.
 
  The database can be seeded with Surrey and BMAF athletes.
 
@@ -67,7 +69,9 @@ I accept there will never be one "winning system", because every event and leagu
 ## Results 
 We will offer a standard format for results (in flavours for races, relays, and T&F), and a hosted results service which accepts it.  Anyone preparing results in the right way can upload them and we will give back a nice link they can embed in their web site as an IFrame.
 
-#Events it would be good to support during funded period
+#Events we hope to support
+We aim to develop with regular cycles, learning from real events.  A precursor system has aready handled one cross country season and a year of entries for county-level events.  The following events are in our calendar:
+
 Surrey League Cross Country (using somewhat legacy system, but feeding our new database).  This is critical as it gets us relationships with 40+ clubs.
 - Oct 10th, Nov 7th, Jan 16, Feb 13
 
