@@ -24,18 +24,18 @@ body>.container {
   padding: 40px 15px;
   text-align: center;
 }
-
+/*
 .navbar-inverse {
 	background-color: #a0c041;
 	background-image: none;
 }
-
 .navbar-inverse .navbar-nav > li > a {
 	color: #000;
 }
+*/
 
-.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a, 
-	.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+.navbar.navbar-nav > .active > a, .navbar .navbar-nav > .open > a, 
+	.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:focus, .navbar .navbar-nav > .active > a:hover {
 	background-color: #ff6244;
 	background-image: none;
 }
