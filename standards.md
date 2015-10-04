@@ -50,7 +50,7 @@ When describing programmes or sets of results, we recommend separating the dates
 ### Dates in Excel and user interfaces
 Pasting or importing of dates and times from Excel is risky.  Spreadsheets understand dates, but if you go via a clipboard or to CSV/text, there is the risk of muddling days and months.   Within a spreadsheet, dates should be proper dates.
 
-User input is however best done in the format that users are familiar with, even though the date is stored in the above format. Thus UK users would prefer 25/12/2014.  The "perfect" option is to take the date format from their international settings.  System output is also prescribed sometimes e.g. consistency with external sources. In this case the date format should be conifgurable according to the purpose of the output.  
+User input is however best done in the format that users are familiar with, even though the date is stored in the above format. Thus UK users would prefer 25/12/2014.  This could be made configurable by taking the date format from their international settings.  System output is also prescribed sometimes e.g. consistency with external sources. In this case the date format should be configurable according to the purpose of the output.  
 
 ## Performances, time and distance
 
@@ -90,6 +90,8 @@ Our "first stab" is to use the codes from Power of Ten, which appear in the URL 
 The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slugs' - URL components - such as 'one-mile' and 'high-jump'.  These are certainly useful.
 
 There is an issue with using "Discipline" for these events, since UKA/IAAF has already defined the above as "Events". The athletics disciplines are Track (includes track and field events), Road, Race Walking and a group of disciplies covering Cross-Country, Trail, Fell/Hill and Mountain (not the same level of standardisation here). 
+
+The short codes will be OK for results but not for instance in competition programmes.  There it might be better to have standard short descriptions e.g. Shot Put, 100m Hurdles 
 
 ### Unusual distances
 
