@@ -32,6 +32,7 @@ Let's warm up with something simple:
 
 If the 1976 Olympic Decathlon champion decides to make a comeback, we can discuss complicating things then.
 
+Unfortunately nothing is so simple.  Masters athletics from the world level downwards has adopted W = women instead of F = Female.  This is important because all the age categories are prefixed with W e.g. W35, W40 etc.
 
 ## Dates
 
