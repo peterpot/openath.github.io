@@ -14,7 +14,7 @@ We'd like to evolve agreed standards for interchange between systems.  This will
 
 The biggest challenge, to tackle first, is about codes and terminology:  how do we refer to things?
 
-This document is not aiming for the levels of precision of an ISO or Internet standard.  In the words of the Internet Engineering Task Force, we want "rough consensus and running code".  To this end we do NOT need to agree now exactly how to repesent unusual or historic events such as the six mile track record, or quibble too much about recording the exact weight of the javelin used; these are important, but we can achieve other things while these are being discussed.
+This document is not aiming for the levels of precision of an ISO or Internet standard.  In the words of the Internet Engineering Task Force, we want "rough consensus and running code".  To this end we do NOT need to agree now exactly how to represent unusual or historic events such as the six mile track record, or quibble too much about recording the exact weight of the javelin used; these are important, but we can achieve other things while these are being discussed.
 
 If you disagree with the standards, join the forum (coming soon) and argue, or make counter-suggestions, so we can reach the best solution quickly.  The OpenTrack project wants to set its standards quickly.   If yu are happy to follow these standards, let us know and we'll add your name to a list to put pressure on others.
 
