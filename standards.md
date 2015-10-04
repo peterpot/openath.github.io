@@ -32,7 +32,7 @@ Let's warm up with something simple:
 
 If the 1976 Olympic Decathlon champion decides to make a comeback, we can discuss complicating things then.
 
-Unfortunately nothing is so simple.  There is an issue with using F=Female.  Masters athletics from the world level downwards has adopted W=Women instead of F=Female.  This is important because all the age categories are prefixed with W e.g. W35, W40 etc.  On the other hand Young athletes would naturally prefer F=Female.  Thus both standards may need to be accommodated!
+Unfortunately nothing is so simple.  There is an issue with using F=Female in that usually the age categories are derived from the gender e.g. M40.  Masters athletics from the world level downwards has however adopted age categories of W35, W40 etc. On the other hand W=Women would not work very well for the young athletes. We will have to take this into account when linking gender and age category. 
 
 ## Dates
 
