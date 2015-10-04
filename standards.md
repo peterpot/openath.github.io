@@ -32,7 +32,7 @@ Let's warm up with something simple:
 
 If the 1976 Olympic Decathlon champion decides to make a comeback, we can discuss complicating things then.
 
-Unfortunately nothing is so simple.  Masters athletics from the world level downwards has adopted W = women instead of F = Female.  This is important because all the age categories are prefixed with W e.g. W35, W40 etc.
+Unfortunately nothing is so simple.  There is an issue with using F=Female.  Masters athletics from the world level downwards has adopted W=Women instead of F=Female.  This is important because all the age categories are prefixed with W e.g. W35, W40 etc.  On the other hand Young athletes would naturally prefer F=Female.  Thus both standards may need to be accommodated!
 
 ## Dates
 
@@ -50,6 +50,7 @@ When describing programmes or sets of results, we recommend separating the dates
 ### Dates in Excel and user interfaces
 Pasting or importing of dates and times from Excel is risky.  Spreadsheets understand dates, but if you go via a clipboard or to CSV/text, there is the risk of muddling days and months.   Within a spreadsheet, dates should be proper dates.
 
+User input is however best done in the format that users are familiar with, even though the date is stored in the above format. Thus UK users would prefer 25/12/2014.  The "perfect" option is to take the date format from their international settings.  System output is also prescribed sometimes e.g. consistency with external sources. In this case the date format should be conifgurable according to the purpose of the output.  
 
 ## Performances, time and distance
 
@@ -76,12 +77,11 @@ We are deliberately avoiding the word 'event', which has too many connotations w
 We would like to have unambiguous short codes which can be used internally, or as search criteria.
 Our "first stab" is to use the codes from Power of Ten, which appear in the URL search parameters.  Here are most of the standard athletics events:
 
-    60,100,200,400,800,1500,3000,5000,10000
+    60,100,200,400,800,1500,3000,5000,10000 - track (and other distances for junior races)
     2000SC, 3000SC - steeplechase
-    60H, 100H, 400H   (and other distances for junior hurdles)
-    HJ, PV, LJ, TJ
-    SP, DT, HT, JT  - discuss
-    Dec, Hep, HepI  - multi-events
+    60H, 80H, 100H, 110H, 200H, 300H, 400H   (and other distances for junior hurdles)
+    HJ, PV, LJ, TJ, SP, DT, HT, JT, WT - field
+    Dec, Hep, HepI, Pen, PenWt  - multi-events
     20KW, 50KW - walks
     4x100, 4x400 - track relays
 
