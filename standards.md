@@ -89,7 +89,7 @@ Our "first stab" is to use the codes from Power of Ten, which appear in the URL 
 
 The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slugs' - URL components - such as 'one-mile' and 'high-jump'.  These are certainly useful.
 
-
+There is an issue with using "Discipline" for these events, since UKA/IAAF has already defined the above as "Events". The athletics disciplines are Track (includes track and field events), Road, Race Walking and a group of disciplies covering Cross-Country, Trail, Fell/Hill and Mountain (not the same level of standardisation here). 
 
 ### Unusual distances
 
@@ -98,6 +98,14 @@ Now it gets interesting as there are many ways to do it.
     Mile  - one mile (assume track)
     3M, 5M, 10M - precise distance in miles - assume road
     5K, 10K - assumed to be road; if it was track, we'd use '5000'
+
+
+
+## Competition ##
+
+A competition is a group of athletics events taking places on one or more dates.  
+This can include a series of competitions e.g. a League, possibly with a combined entry fee, and usually with results and places for the series as a whole.    
+
 
 
 ## Disability Categories ##
