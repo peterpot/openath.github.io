@@ -1,5 +1,6 @@
 /* Sticky footer styles
  * -------------------------------------------------- */
+
 html {
     position: relative;
 	min-height: 100%;
@@ -34,14 +35,23 @@ body>.container {
 }
 */
 
+.navbar a.navbar-brand {
+	padding-top: 5px;
+}
+
 .navbar.navbar-nav > .active > a, .navbar .navbar-nav > .open > a, 
 	.navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:focus, .navbar .navbar-nav > .active > a:hover {
-	background-color: #ff6244;
+	background-color: #f26522;
 	background-image: none;
 }
 
-h1, h2, h3 {
-	color: #ff6244;
+
+h1 {
+	color: #f26522;
+	font-weight: 400;
+}
+h2, h3, h4 {
+	color: #808285;
 }
 
 .footer > .container {

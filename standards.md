@@ -8,7 +8,7 @@ tags: standards
 # Open Standards
 
 
-# Preface
+## Preface
 
 We'd like to evolve agreed standards for interchange between systems.  This will hopefully involve both system-to-system standards (e.g JSON document formats), and human-friendly ones.  The human-friendly ones will largely relate to what headings and values to use in spreadsheets; we can provide tools to check these and convert.
 
