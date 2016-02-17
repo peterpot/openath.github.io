@@ -5,22 +5,26 @@ permalink: /standards/
 tags: standards
 ---
 
-# Open Standards
+# The importance of open standards
 
+Lots of people are building systems to manage parts of the sport.  No one system will ever do it all.  It would be a huge step forward if we could agree common interchange formats.    
 
-## Preface
+We'd like to evolve agreed standards for interchange between systems.  This will hopefully involve both system-to-system standards (e.g JSON document formats), and human-friendly ones. The human-friendly ones will largely relate to what headings and values to use in spreadsheets; we can provide tools to check these and convert to JSON.
 
-We'd like to evolve agreed standards for interchange between systems.  This will hopefully involve both system-to-system standards (e.g JSON document formats), and human-friendly ones.  The human-friendly ones will largely relate to what headings and values to use in spreadsheets; we can provide tools to check these and convert.
-
-The biggest challenge, to tackle first, is about codes and terminology:  how do we refer to things?
-
-This document is not aiming for the levels of precision of an ISO or Internet standard.  In the words of the Internet Engineering Task Force, we want "rough consensus and running code".  To this end we do NOT need to agree now exactly how to represent unusual or historic events such as the six mile track record, or quibble too much about recording the exact weight of the javelin used; these are important, but we can achieve other things while these are being discussed.
+This document is not aiming for the levels of precision of an ISO or Internet standard.  In the words of the Internet Engineering Task Force, we want "rough consensus and running code".  To this end we do NOT need to agree now exactly how to represent unusual or historic events such as the six mile track record, or quibble too much about recording the exact weight of the javelin used; these are important, but we can achieve other things while these are being discussed.   We DO need to start representing the common events in the same ways.
 
 If you disagree with the standards, join the forum (coming soon) and argue, or make counter-suggestions, so we can reach the best solution quickly.  The OpenTrack project wants to set its standards quickly.   If yu are happy to follow these standards, let us know and we'll add your name to a list to put pressure on others.
 
+The process will likely work at two levels
+
+ - codes and representations: what we put in fields
+ - commn reference data:  how do we all refer to a particular club or team, or a venue?
+ - example documents to represent things like athletes, start lists, fixtures and results
+ 
+
 # Codes and representation
 
-We want to set unambiguous codes for the "things" use to build databases and systems.  It is useful if these codes are safe for use in URL parameters (avoiding '?' and '/'), markup ('<, & and &'), and in filenames.  There are workarounds for all of these things, but let's just avoid as many as we can.  
+We want to set unambiguous codes for the "things" use to build databases and systems.  It is useful if these codes are safe for use in URL parameters (avoiding '?' and '/'), markup ('<, & and &'), and in filenames.  It is also useful if they are not case-sensitive.  There are workarounds for all of these things, but let's just avoid as many as we can.  
 
 
 ## Gender ##
@@ -32,25 +36,47 @@ Let's warm up with something simple:
 
 If the 1976 Olympic Decathlon champion decides to make a comeback, we can discuss complicating things then.
 
+Thus, if exchanging athlete data, we might have a JSON document like this...
+
+    {"first_name": "Fred", "last_name": "Bloggs", "gender": "M"}
+
+..and in a spreadsheet, we would have a column with "M" or "F"
+
 Unfortunately nothing is so simple.  There is an issue with using F=Female in that usually the age categories are derived from the gender e.g. M40.  Masters athletics from the world level downwards has however adopted age categories of W35, W40 etc. On the other hand W=Women would not work very well for the young athletes. We will have to take this into account when linking gender and age category. 
+
+## Countries
+
+Three letter ISO codes are preferred:
+
+    GBR
+    FRA
+    ESP
+
+Great Britain has some "history" here to make life more complex, so we allow for some "pseudo-countries":
+
+    ENG
+    SCO
+    WAL
+    NIR
+
+
+
 
 ## Dates
 
 We aim to be guided by <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a>
 
-Databases have rich ways to store dates, date-times and times, complete with time zone information.  In athletics this can be troublesome, unless you are very careful.  For example, you set up your county championships timetable in some detail in March, then the clocks change, and you find the computer assumed GMT when you entered in, and everyone shows up an hour off; or that you are advertising the wrong start time for an early-autumn cross country race.
-
-
+Databases have rich ways to store dates, date-times and times, complete with time zone information.  In athletics this can be troublesome, unless you are very careful.  For example, you set up your county championships timetable in some detail in March, then the clocks change, and you find the computer assumed GMT when you entered in, and everyone shows up an hour off; or that you are advertising the wrong start time for an early-autumn cross country race.  (Yes, this has happened!)
 
     "2015-10-17"  - use for dates, the ISO standard.  (Excel will differ)
     "14:35" - use for the start time of an event, for historic or programme purposes
 
-When describing programmes or sets of results, we recommend separating the dates and times.  If you are going to use exact datetime variables, you have to get the time zone right (both when the input was done and when the event is taking place.)
+When describing programmes or sets of results, we recommend separating the dates and times. 
 
 ### Dates in Excel and user interfaces
 Pasting or importing of dates and times from Excel is risky.  Spreadsheets understand dates, but if you go via a clipboard or to CSV/text, there is the risk of muddling days and months.   Within a spreadsheet, dates should be proper dates.
 
-User input is however best done in the format that users are familiar with, even though the date is stored in the above format. Thus UK users would prefer 25/12/2014.  This could be made configurable by taking the date format from their international settings.  System output is also prescribed sometimes e.g. consistency with external sources. In this case the date format should be configurable according to the purpose of the output.  
+User input is however best done in the format that users are familiar with, even though the date is stored internally in a proper, unambiguous format. Thus UK users would prefer 25/12/2014.  This could be made configurable by taking the date format from their international settings.  System output is also prescribed sometimes e.g. consistency with external sources. In this case the date format should be configurable according to the purpose of the output.  
 
 ## Performances, time and distance
 
@@ -68,51 +94,98 @@ Times should be passed in a decimalized text format and interpreted as a number 
 
 Distances for jumps and throws can be stored as decimal numbers.
 
+There are some standard suffixes which are commonly used in results and rankings:  10.3i to denote indoors, 10.3w to suggest wind-assisted. We see this as a presentation layer problem; a good database or rankings system would decompose this to have an 'indoor' or 'wind-assisted' flag.
 
 
-## Disciplines
 
-We are deliberately avoiding the word 'event', which has too many connotations within athletics, as well as in IT generally.  For the purpose of this document, we will call 'High Jump' or '100m' <em>disciplines</em>.
+## Discipline Codes
+If we are exporting the data from an online entry system, or the results of a meeting, we want to use common codes, so that the 400m is always represented the same way.
 
-We would like to have unambiguous short codes which can be used internally, or as search criteria.
-Our "first stab" is to use the codes from Power of Ten, which appear in the URL search parameters.  Here are most of the standard athletics events:
+A wise computer scientist once said "There are only two hard problems in computer science - cache invalidation and naming things".  Never mind the first one - it's really hard to pick names. Especially, it's hard to pin down the word "Event".   I am deliberately avoiding it, as it has too many connotations within athletics, as well as in IT generally.  
 
-    60,100,200,400,800,1500,3000,5000,10000 - track (and other distances for junior races)
+For the purpose of THIS DOCUMENT, we will call 'High Jump' or '100m' <em>disciplines</em>.  By contrast, if you are looking at a programme, the "U13 Girls High Jump first round, Sat 10:35" is more of an "event", in the sense of "something that happens at a point in time".  We might call the latter 'CompEvent' or 'ProgEvent' (to be discussed)
+
+Anyway, we would like to have unambiguous short codes which can be used internally, or as search criteria.   We're not going to get the world to switch to them, but at least then people would only have to convert to ONE other standard.
+
+Our "first stab" is to use the codes from Power of Ten, which appear in the URL search parameters. However, we have introduced some slight changes.  In particular, we don't want the interpretation to depend on the case of a letter.  So 'm' meaning both Metre and Mile is dangerous.
+
+
+    HJ, PV, LJ, TJ, SP, DT, HT, JT, WT - field events
+    60,100,200,400,800,1500,3000,5000,10000 - track (and other distances for junior races).  Any raw number is assumed to be a number in metres
+    60H, 80H, 100H, 110H, 200H, 300H, 400H - number + 'H' denotes hurdles
     2000SC, 3000SC - steeplechase
-    60H, 80H, 100H, 110H, 200H, 300H, 400H   (and other distances for junior hurdles)
-    HJ, PV, LJ, TJ, SP, DT, HT, JT, WT - field
     Dec, Hep, HepI, Pen, PenWt  - multi-events
     20KW, 50KW - walks
-    4x100, 4x400 - track relays
+    4x100, 4x400 - track relays.  
 
-    ZXC - used for cross country, over distances which may not be accurate or comparable.
+The mile is special and of historic importance.  So, in a programme or set of entries, we suggest to allow
 
-The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slugs' - URL components - such as 'one-mile' and 'high-jump'.  These are certainly useful.
+    MILE  - as it says.
+
+Moving onto road and cross country, we'd like to suggest a combination of a rough distance measure and a suffix which shows the units.  
+
+    2K, 5k, 10K, 4.5K - distance in kilometers
+    5M, 10M, 2.2M - distance in miles  (NOT metres!)
+    MAR - marathon
+    HM - half marathon
+    
+    5MXC - any of the above plus "XC" denotes cross country.
+
+It is not necessary to add an XC suffix; this depends on the context.  
+
+As an example, we're taking entries now for a school fundraiser with three races.  We call them "2K", "5K" and "10K" in the database, and will use those codes as field IDs in the web form, or in a spreadsheet summarising the entries.  We don't need to add "XC", because they all are.  They can have more expansive display names like "2K jog-with-the-dog" if desired.
+
+The advantage of this is that one can compute a very rough speed and thus check if the input given is realistic.  For example, if you are taking online entries and your code for the Masters XC race is just "XC", you have no way to know if a predicted or actual time of "30.15" is realistic.  But if you know you are talkin about a 5 mile race, it's pretty clear that 30:15 was intended, and you can either reject or "fix" the input depending on your philosophy.
+
+The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slugs' - URL components - such as 'one-mile' and 'high-jump'.  These are certainly useful and could be added to a standard.
 
 There is an issue with using "Discipline" for these events, since UKA/IAAF has already defined the above as "Events". The athletics disciplines are Track (includes track and field events), Road, Race Walking and a group of disciplies covering Cross-Country, Trail, Fell/Hill and Mountain (not the same level of standardisation here). 
 
 The short codes will be OK for results but not for instance in competition programmes.  There it might be better to have standard short descriptions e.g. Shot Put, 100m Hurdles 
 
-### Unusual distances
-
-Now it gets interesting as there are many ways to do it.
-
-    Mile  - one mile (assume track)
-    3M, 5M, 10M - precise distance in miles - assume road
-    5K, 10K - assumed to be road; if it was track, we'd use '5000'
-
-
-
-## Competition ##
-
-A competition is a group of athletics events taking places on one or more dates.  
-This can include a series of competitions e.g. a League, possibly with a combined entry fee, and usually with results and places for the series as a whole.    
 
 
 
 ## Disability Categories ##
 
-Need a list and a link to a good explanation
+We need a list and a link to a good explanation
+
+
+# Common reference data
+
+It would be really, really useful if everyone could agree unambiguously on how to refer to clubs and associations, and to venues.   Our plan for this is as follows:
+
+ * We will offer an "identity service", giving unique IDs to all the clubs, associations, and venues we can
+ * We will provide a web site making these things easy to find
+ * We will make reasonable efforts to de-duplicate these
+ * We will let people "claim their club" and add extra open information - logos, flags, nicknames, training venues, contact details
+ * These codes and IDs will be OPEN DATA, and anyone is free to use them - downloaded in bulk, or via web forms and APIs
+
+## Clubs: an example
+Taking clubs as an example:  each club in England and Wales has a unique 8-digit code assigned by England Athletics, in the "Trinity" database.  These have now been made available as Open Data - many thanks to Engladnd Athletics for this.    
+
+We have taken a database created jointly by Simon Fennel, Peter Kennedy and ourselves with over 3000 athletics organisations, and given each of them a Universally Unique ID (UUID).  These are a computing standard.  For example, I hereby decree that my club Thames Hare and Hounds may hereafter be referred to by all and sundry as....drum roll....
+
+    opentrack_id:  6b2af700-0481-4f73-b9ae-8221ae619b55
+
+UUIDs are easy to generate and process in all programming languages.  There are more available than there are atoms in the universe. They do have some useful properties.  They embed a timestamp, so a computer can work out when they were created.  And practically, they are "evenly spread", so the first 8 characters - 6b2af700 - will almost certainly be good enough to identify that club for practical purposes.  And you'd probably get away with "6b2a" for quite a while.
+
+However, we don't expect this to catch on, so we also propose to allocate an opentrack_code on a first-come-first-served basis in each country.  In sets of results, just about everyone locally refers to Thames Hare and Hounds as...
+
+    THH
+
+In a global database, we would prefix these with a country code:
+
+    GBR/THH
+
+As a starting point, we have given three letter codes to 40 clubs in the Surrey Cross Country League, based on "common use".  We suggest that the major leagues also contribute the acronyms they use.
+
+At a technical level, we feel we could allow codes of up to 5 characters.  (3 is quite nice for results formatting).  They should NOT include "/" or "&", as these will cause trouble in URL parameters.  However, they may offer a "display alternative" formatted any way they like.
+
+    /rankings_search?club=HW   - GOOD
+    /rankings_search?club=H/W   - BAD, needs escaping
+    /rankings_search?club=TH&H   - BAD, needs escaping, & would mean a new parameter
+
 
 
 
