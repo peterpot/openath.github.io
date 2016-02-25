@@ -162,7 +162,7 @@ It would be really, really useful if everyone could agree unambiguously on how t
  * These codes and IDs will be OPEN DATA, and anyone is free to use them - downloaded in bulk, or via web forms and APIs
 
 ## Clubs: an example
-Taking clubs as an example:  each club in England and Wales has a unique 8-digit code assigned by England Athletics, in the "Trinity" database.  These have now been made available as Open Data - many thanks to Engladnd Athletics for this.    
+Taking clubs as an example:  each club in England has a unique 8-digit code assigned by England Athletics, in the "Trinity" database.  These have now been made available as Open Data - many thanks to Engladnd Athletics for this.    This is very helpful indeed, but sometimes we need to compete against a non-English club or athlete, so a potentially global standard is needed.
 
 We have taken a database created jointly by Simon Fennel, Peter Kennedy and ourselves with over 3000 athletics organisations, and given each of them a Universally Unique ID (UUID).  These are a computing standard.  For example, I hereby decree that my club Thames Hare and Hounds may hereafter be referred to by all and sundry as....drum roll....
 
@@ -187,6 +187,10 @@ At a technical level, we feel we could allow codes of up to 5 characters.  (3 is
     /rankings_search?club=TH&H   - BAD, needs escaping, & would mean a new parameter
 
 
+## Other organisations
 
+We are working on a global database of organisations - meaning anyone who can put on a competition.  Most organisations in athletics have a pretty clear acronym - WADA, IAAF, IOC, WMA, and within the UK EA, SEAA, BMAF etc.  These will be stored alongside clubs and given Opentrack IDs and Codes.  It will then be possible to build up a map of which organisations are affiliated to which governing bodies.
+
+Peter Kennedy has bravely volunteered to maintain this data!
 
 
