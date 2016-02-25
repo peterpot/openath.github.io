@@ -98,7 +98,7 @@ There are some standard suffixes which are commonly used in results and rankings
 
 
 
-## Discipline Codes
+## Discipline (?) Codes
 If we are exporting the data from an online entry system, or the results of a meeting, we want to use common codes, so that the 400m is always represented the same way.
 
 A wise computer scientist once said "There are only two hard problems in computer science - cache invalidation and naming things".  Never mind the first one - it's really hard to pick names. Especially, it's hard to pin down the word "Event".   I am deliberately avoiding it, as it has too many connotations within athletics, as well as in IT generally.  
@@ -142,6 +142,35 @@ The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slug
 There is an issue with using "Discipline" for these events, since UKA/IAAF has already defined the above as "Events". The athletics disciplines are Track (includes track and field events), Road, Race Walking and a group of disciplies covering Cross-Country, Trail, Fell/Hill and Mountain (not the same level of standardisation here). 
 
 The short codes will be OK for results but not for instance in competition programmes.  There it might be better to have standard short descriptions e.g. Shot Put, 100m Hurdles 
+
+### Ordering of disciplines ###
+
+There is a "natural order", at least in UK athletics, which people expect to see on entry forms or in dropdowns.  For a track meeting, it is as follows:
+
+    1. Track events, increasing distance
+    2. Hurdles, increasing distance
+    3. Steeplechases
+    4. Field events:  HJ PV LJ TJ SP DT HT JT
+    5. Relays, increasing distance
+
+Therefore we could benefit from some open source code to sort events in this order, and should use this in any statistical reports.
+
+## Age Groups ##
+
+UKA has well defined age group codes:  U13, U15, U17, U20, U23 (rarely used), SEN.  The definition depends on the type of competition (Road, XC, Track and Field), the date of birth of the athlete and the start date of the competition.
+
+It is very common in results and entries to conflate the age and gender.   Eveen more annoyingly for programmers, in the UK we tend to add an age-dependent suffix - 'B' for Boys, 'G' for girls, 'M' for Men and 'W' for women.  Thus, a county or national programme would list U13B, U15B, U17M, U20M.
+
+Masters go in 5 year bands:  V35, V40, V45 etc.   This is a global standard set by WMA. It is commonly conflated with gender e.g. M45, W50.
+
+Schools are commonly referred to be year in the UK, so we suggest  YEAR1...YEAR11.  (Would YEAR01, YEAR02...YEAR11 be better so they always sort in order?)
+
+Different countries are expected to have different age group coding systems and cutoff rules.  Therefore, a well designed library would have 'namespaced' packages for countries or organising bodies with equivalent, swappable functions.
+
+    from athlib.uka import age_group
+    from athlib.wma import age_group
+
+IAAF age groups - apparently different, need to check rules
 
 
 
