@@ -10,18 +10,44 @@ tags: home
 .feature .glyphicon { font-size:10em; color:#f26522}
 .feature p { text-align: left}
 .feature img {width: 50%;}
+.jumbotron h1 { text-shadow: -1px 2px 3px #fff }
+.container .jumbotron, .container-fluid .jumbotron { padding-left: 0 !important; padding-right: 0 !important; bottom: initial}
+#carousel-example-generic { position: relative; top:0; left: 0}
+.carousel-inner { margin-bottom: -200px }
+.jumbotron .container-fluid {top: 50%; transform: translateY(-50%); bottom:initial}
+.container-fluid .page-header { border: 0}
+.jumbotron .container-fluid p { font-size: 2em; text-shadow: 1px 1px 2px #000 }
 </style>
 
+<div class="container">
 <div class="jumbotron">
-      <div class="container">
-        <h1>OPEN<span style="color:#f26522">TRACK</span></h1>
-        <p>Making athletics more fun and easier to manage.</p>
-        <em>This website will have lots of running imagery, Really Soon Now, so that everyone knows what it's about:    track meetings, cross country, relays; from elite to kids to community</em>
-      </div>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		</ol>
+
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="/img/gallery/1.jpg" alt="hurdles">
+			</div>
+			<div class="item">
+				<img src="/img/gallery/2.jpg" alt="track">
+			</div>
+			<div class="item">
+				<img src="/img/gallery/3.jpg" alt="xc">
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<h1 class="page-header">OPEN<span style="color:#f26522">TRACK</span></h1>
+		<p style="color: #fff">Making athletics more fun and easier to manage.</p>
+		<!--em>This website will have lots of running imagery, Really Soon Now, so that everyone knows what it's about: track meetings, cross country, relays; from elite to kids to community</em-->
+	</div>
 </div>
 
 
-<div class="container">
 <h1>We're offering three hosted services....</h1>
 
 <div class="row feature">
