@@ -10,13 +10,26 @@ tags: home
 .feature .glyphicon { font-size:10em; color:#f26522}
 .feature p { text-align: left}
 .feature img {width: 50%;}
-.jumbotron h1 { text-shadow: -1px 2px 3px #fff }
-.container .jumbotron, .container-fluid .jumbotron { padding-left: 0 !important; padding-right: 0 !important; bottom: initial}
+.jumbotron h1 { text-shadow: 4px 2px 2px #fff }
+.jumbotron h1>span { text-shadow: 4px 2px 2px #000 }
+/*.container-fluid .jumbotron { padding-left: 0 !important; padding-right: 0 !important; bottom: initial}*/
 #carousel-example-generic { position: relative; top:0; left: 0}
-.carousel-inner { margin-bottom: -200px }
-.jumbotron .container-fluid {top: 50%; transform: translateY(-50%); bottom:initial}
+.carousel-inner { margin-bottom: -21% }
+.jumbotron .container-fluid {top: 50%; transform: translateY(-50%)}
 .container-fluid .page-header { border: 0}
 .jumbotron .container-fluid p { font-size: 2em; text-shadow: 1px 1px 2px #000 }
+
+.col-sm-4 img {
+	margin: .5em 0;
+}
+.col-sm-4 p {
+	font-size: 1.1em;
+}
+
+.col-sm-4 img + p, 
+	.col-sm-4 .glyphicon + p {
+	margin-top: 1em;
+}
 </style>
 
 <div class="container">
@@ -51,20 +64,20 @@ tags: home
 <h1>We're offering three hosted services....</h1>
 
 <div class="row feature">
-    <div class="col-md-4">
+    <div class="col-sm-4">
       <h2>Entries</h2>
       <span class="hugeicon glyphicon glyphicon-log-in"></span>
       <p>Entries for track and field, cross country, road and relays.  By individuals or teams.
           
       </p>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4">
       <h2>Timing/Recording</h2>
       <span class="hugeicon glyphicon glyphicon-dashboard"></span>
       <p>Manage races the same way as top officials, using a handful of mobile devices.</p>
       <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
     </div>
-    <div class="col-md-4">
+    <div class="col-sm-4">
       <h2>Results</h2>
       <span class="hugeicon glyphicon glyphicon-list"></span>
       <p>Publish your results.   Validated. Real time.  Syndicated.  Searchable.  All formats and devices.</p>
@@ -86,25 +99,24 @@ tags: home
 </div>
 
 
-<div class="container">
-<div class="row feature">
-    <div class="col-md-4">
-      <h2>Open Data</h2>
-      <img src="/img/open_data.png">
-      <p>Building the open reference data to get everyone talking:  organisations, clubs, venues, courses
-      </p>
-    </div>
+<div class="container-fluid">
+	<div class="row feature">
+		<div class="col-sm-4">
+		  <h2>Open Data</h2>
+		  <img src="/img/open_data.png">
+		  <p>Building the open reference data to get everyone talking:  organisations, clubs, venues, courses
+		  </p>
+		</div>
 
-    <div class="col-md-4">
-      <h2>Open Standards</h2>
-      <img src="/img/open_standards.png">
-      <p>Defining standard formas for interchange of entries, start lists, results and rankings</p>
-    </div>
-    <div class="col-md-4">
-      <h2>Open Source</h2>
-      <img src="/img/open_source.png">
-      <p>If we start to publish data and standards, other people can build on it</p>
-    </div>
-</div>
-</div>
+		<div class="col-sm-4">
+		  <h2>Open Standards</h2>
+		  <img src="/img/open_standards.png">
+		  <p>Defining standard formas for interchange of entries, start lists, results and rankings</p>
+		</div>
+		<div class="col-sm-4">
+		  <h2>Open Source</h2>
+		  <img src="/img/open_source.png">
+		  <p>If we start to publish data and standards, other people can build on it</p>
+		</div>
+	</div>
 </div>
