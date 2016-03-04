@@ -5,68 +5,26 @@ permalink: /
 tags: home
 ---
 
-<style>
-.feature {text-align: center; }
-.feature .glyphicon { font-size:10em; color:#f26522}
-.feature p { text-align: left}
-.feature img {width: 50%;}
-.jumbotron h1 { 
-	text-shadow: 2px 0 4px #eee, -2px 0 4px #eee, 0 2px 4px #eee, 0 -2px 4px #eee, 1px 1px 4px #eee, -1px -1px 4px #eee, 1px -1px 4px #eee, -1px 1px 4px #eee;
-}
-/*
-.jumbotron h1>span { text-shadow: 4px 2px 4px #000 }
-*/
-/*.container-fluid .jumbotron { padding-left: 0 !important; padding-right: 0 !important; bottom: initial}*/
-#carousel-example-generic { position: relative; top:0; left: 0}
-.carousel-inner { margin-bottom: -21% }
-.jumbotron .container-fluid {top: 50%; transform: translateY(-50%)}
-.container-fluid .page-header { border: 0}
-.jumbotron .container-fluid p { margin-left: 2em; font-size: 2em; text-shadow: 0px 0px 3px #000, 10px 0px 1px #eee }
-
-.col-sm-4 img {
-	margin: .5em 0;
-}
-.col-sm-4 p {
-	font-size: 1.4em;
-}
-
-.col-sm-4 img + p, 
-	.col-sm-4 .glyphicon + p {
-	margin-top: 1em;
-}
-</style>
-
-<div class="container">
-	<div class="jumbotron">
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			</ol>
-
-			<div class="carousel-inner" role="listbox">
-				<div class="item active">
-					<img src="/img/gallery/1.jpg" alt="hurdles">
-				</div>
-				<div class="item">
-					<img src="/img/gallery/2.jpg" alt="track">
-				</div>
-				<div class="item">
-					<img src="/img/gallery/3.jpg" alt="xc">
-				</div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<h1 class="page-header">OPEN<span style="color:#f26522">TRACK</span></h1>
-			<p style="color: #fff">Making athletics go faster.</p>
-			<!--em>This website will have lots of running imagery, Really Soon Now, so that everyone knows what it's about: track meetings, cross country, relays; from elite to kids to community</em-->
-		</div>
+<div class="jumbotron" id="mybox">
+	<h1 class="page-header">OPEN<span style="color:#f26522">TRACK</span></h1>
+	<p>Making athletics go faster.<br><br></p>
+</div>
+<div id="slides">
+	<div>
+		<img src="/img/gallery/img0.jpg" alt="hurdles">
 	</div>
+	<div>
+		<img src="/img/gallery/img1.jpg" alt="xc">
+	</div>
+	<div>
+		<img src="/img/gallery/img3.jpg" alt="thh">
+	</div>
+	<div>
+		<img src="/img/gallery/img2.jpg" alt="track">
+	</div>
+</div>
 
-
-	<h1>We're offering three hosted services....</h1>
-
+<div class="container" style="padding-top: 0">
 	<div class="row feature">
 		<div class="col-sm-4">
 		  <h2>Entries</h2>
@@ -107,21 +65,22 @@ tags: home
 	<div class="row feature">
 		<div class="col-sm-4">
 		  <h2>Open Data</h2>
-		  <img src="/img/open_data.png">
+		  <img src="/img/open_data.png" alt="open data">
 		  <p>Building the open reference data to get everyone talking:  organisations, clubs, venues, courses
 		  </p>
 		</div>
 
 		<div class="col-sm-4">
 		  <h2>Open Standards</h2>
-		  <img src="/img/open_standards.png">
+		  <img src="/img/open_standards.png" alt="open standards">
 		  <p>Defining standard formas for interchange of entries, start lists, results and rankings</p>
 		</div>
 		<div class="col-sm-4">
 		  <h2>Open Source</h2>
-		  <img src="/img/open_source.png">
+		  <img src="/img/open_source.png" alt="open source">
 		  <p>If we start to publish data and standards, other people can build on it</p>
 		</div>
 	</div>
 </div>
 	<br><br>
+
