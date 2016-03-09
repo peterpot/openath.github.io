@@ -5,12 +5,12 @@ permalink: /opendata/
 tags: about
 ---
 
-#Goals
+# Goals
 OpenTrack aims to make the sport of athletics easier to manage through Open Data.
 
 Much of the work done by sports administrators involves shuffling spreadsheets full of entry and results data, and repeating common information in email such as venues.
 
-#Use of existing open data sets
+## Use of existing open data sets
 We are getting started by using a number of existing data sets
 
  - <a href="http://www.openstreetmap.org">OpenStreetMap</a> (license: ODBL), which contains information from individual contributors on many sporting venues.  We aim to collect venue data in a manner compatible with OSM's tagging, so it could be contributed back in future
@@ -28,7 +28,7 @@ We are also working with bodies in the sport to get key public or semi-public re
 If you know of other existing data sets which might help us, or you may be in a position to release some data, please contact us via opentrack@reportlab.com.
 
 
-#New data sets we are creating
+# New data sets we are creating
 
 Unless otherwise stated, our data sets are under the <a href="http://opendatacommons.org/licenses/odbl/summary/">Open Database License</a>, originally developed by OpenStreetMap.   OpenStreetMap has the most similar "contribution model".  Most of the data we are collecting is "hard facts" where the concept of authorship or individual ownership does not really apply.  The thinking behind their license choice is explained <a href="https://wiki.osmfoundation.org/wiki/License">here</a>.
 
