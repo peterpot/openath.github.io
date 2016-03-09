@@ -8,12 +8,14 @@ tags: about
 # Goals
 OpenTrack aims to make the sport of athletics easier to manage through Open Data.
 
-Much of the work done by sports administrators involves shuffling spreadsheets full of entry and results data, and repeating common information in email such as venues.
+Much of the work done by sports administrators involves shuffling spreadsheets full of entry and results data, and repeating common information in email such as venues.  We believe that we can save volunteers time, and help people enjoy better information sooner, through making this data open and putting it in one place.  
+
+Below we describe our plans for the data, and the licensing.
 
 ## Use of existing open data sets
-We are getting started by using a number of existing data sets
+We are getting started by using a number of data sets which existed before the project began:
 
- - <a href="http://www.openstreetmap.org">OpenStreetMap</a> (license: ODBL), which contains information from individual contributors on many sporting venues.  We aim to collect venue data in a manner compatible with OSM's tagging, so it could be contributed back in future
+ - <a href="http://www.openstreetmap.org">OpenStreetMap</a> (license: <a href="http://opendatacommons.org/licenses/odbl/">ODBL</a>), which contains information from individual contributors on many sporting venues.  We aim to collect venue data in a manner compatible with OSM's tagging, so it could be contributed back in future
  - <a href="http://en.wikipedia.org">Wikipedia</a> (license: <a href="https://en.wikipedia.org/wiki/Wikipedia:Copyrights">Various, mostly CC-BY-SA 3.0 Unported</a>), which has fairly complete listings of federations and associations at international level
  - <a href="http://ec.europa.eu/eurostat/web/gisco/geodata/reference-data/administrative-units-statistical-units">EuroStat administrative boundaries</a> (License: <a href="http://ec.europa.eu/eurostat/about/our-partners/copyright">custom</a>)- a database of all the administrative regions in Europe (counties, provinces, towns etc), which we will use to classify where an organisation or venue is based, and to sidestep much nonsense around the UK's historic boundary definitions!
  - <a href="https://www.activeplacespower.com/opendata">Active Places</a> (License: 
@@ -21,9 +23,9 @@ We are getting started by using a number of existing data sets
 
 We are also working with bodies in the sport to get key public or semi-public resources released formally as Open Data.  For example:
 
- - <a href="https://data.lab.fiware.org/dataset/athletics-clubs-in-england-and-wales">Athletics Clubs in England and Wales</a>, a data set released by England Athletics at our request. ( License: <a href="http://opendefinition.org/licenses/cc-by/">cc-by-4.0</a>)
+ - <a href="https://data.lab.fiware.org/dataset/athletics-clubs-in-england-and-wales">Athletics Clubs in England and Wales</a>, a data set released by England Athletics at our request. ( License: <a href="http://opendefinition.org/licenses/cc-by/">CC-BY-4.0</a>).  
 
- - <a href="http://www.howardgrubb.co.uk/athletics/data/wavacalc15.xls">Masters Age Grade Rankings (Road, 2015)</a>, used to work out how good a performance is for your age, were placed under a CC-BY-4.0 in February at our request.  See the last tab of the above Excel sheet
+ - <a href="http://www.howardgrubb.co.uk/athletics/data/wavacalc15.xls">Masters Age Grade Rankings (Road, 2015)</a>, used to work out how good a performance is for your age, were placed under <a href="http://opendefinition.org/licenses/cc-by/">CC-BY-4.0</a> in February at our request.  See the last tab of the above Excel sheet.   We are waiting for World Masters Athletics to do the same with the Track and Field factors.
 
 If you know of other existing data sets which might help us, or you may be in a position to release some data, please contact us via opentrack@reportlab.com.
 
@@ -66,7 +68,7 @@ Results will generally include the name, current affiliation and age group of th
 
 ## Created works:  documents, artwork and images
 
-We also aim to accumulate certain works which are created by humans but which are beneficial to the sport.   In these cases, we will ask the author to choose a suitable Open Data license; our preference is the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>.    Examples may include
+We also aim to accumulate certain works which are created by humans but which are beneficial to the sport.   In these cases, we will ask the author to choose a suitable Open Data license; our recommendation is the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>, "CC-BY-4.0", which ensures the original author is identified and credited.    Examples may include
 
  - icons and web resources created by volunteers, for anyone in the sport to use
  - photos donated by the photographer for royalty-free use
@@ -83,7 +85,7 @@ Our preferred attribution is either "&copy; OpenTrack contributors", or "&copy; 
 
 You must make it clear that the data is available under the Open Database Licence. This can be achieved by providing a "License" or "Terms" link which links to www.opendatacommons.org/licenses/odbl.
 
-For further guidelines, please follow OpenStreetMap's attributionm guidelines <a href="https://wiki.osmfoundation.org/wiki/License#How_should_I_attribute_you.3F">here</a>
+For further guidelines, please follow OpenStreetMap's attribution guidelines <a href="https://wiki.osmfoundation.org/wiki/License#How_should_I_attribute_you.3F">here</a>
 
 # Legal challenges and queries
 
