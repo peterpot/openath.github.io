@@ -9,7 +9,27 @@ tags: volunteer
 
 We have taken on a lot, and are looking for help at all levels.  If you love athletics, and have some relevant skills and spare time, we welcome offers of help.
 
+## <a name="photo_appeal">Appeal for photos</a>
+We urgently need some good royalty-free photos to build an attractive site.   To get the next slice of funding, it's really important that we can explain to non-athletes that this is a big, happy sport - and in some cases, to explain quickly in a picture what a road relay or a funnel actually is.
+
+The safest way to achieve this is for the photographer to give us permission.   So if you have a good pic or two which shows the sport in a good light, please send it in!
+
+ - all disciplines, from track and field, cross country and road relays
+ - from school sports day up to veterans
+ - an emphasis on the team and club aspect of the sport
+ - plenty of sunshine, as our XC pics from winter tend to lack this ;-)
+ - officials at work - timing, judging, photo finish, funnels - to help illustrate how the sport works
+
+We will give you full credit.    
+
+If you wish to go further and make some photos free for ANYONE to use to promote the sport, we're starting a royalty-free collection; read more on our <a href="/opendata/">Open Data</a> page.
+
+Note that for close-up pictures of children who are still young, whoever the photographer, we prefer parent's permission.
+
+
+
 ## Web and Graphic Design
+
 As you can tell, we could immediately use some help creating a strong brand, with a  good logo and certain other assets.  The logo needs to tell anyone that this is about changing the sport through advanced technology.
 
 We plan to offer some very attractive, visual results services so there is work to do creating reusable stylesheets.
