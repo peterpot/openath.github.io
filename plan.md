@@ -5,11 +5,11 @@ permalink: /plan/
 tags: plan
 ---
 
-#Project Plan
+# Project Plan
 
 This is an outline project plan, covering roughly October to May 2015-16 (our funded period).  We're fleshing it out in October.  We aim to produce public requirements documents on which anyone can comment.
 
-#FIWARE obligations and phases
+# FIWARE obligations and phases
 The programme we have been accepted into has strict timescales and targets to secure continued funding.
 
 Phase 2 is to deliver a technical design and business plan by 22nd November.  We then hope to 'get the nod' to continue into development from 1st December.
@@ -18,7 +18,7 @@ Phase 3 is the main build, December to April.  We aim to build most aspects of t
 
 Phase 4, if we get that far, is for "market testing and tuning"
 
-#Key architectural building blocks
+# Key architectural building blocks
 
 ## Security and access control
 The FIWARE ecosystem will give us tools based on OAuth2, to centrally manage thousands of user and offer a "login with Facebook"-style experience.  There will be many different sites - specific ones for events, for clubs and so on - but we want to centrally manage users, password resets etc.
@@ -43,7 +43,7 @@ In future, the database should be crodwsourced, letting people contribute local 
 ## Open Source: Libraries
 We aim to share release useful building blocks for anyone building systems in the sport.  This may include quite a lot of web front end elements, as most of the action these days is in Javascript.  We'll set up a separate page of useful components.   Data can also be made available in Github pages.
 
-##Open Standards:  JSON and Excel
+## Open Standards:  JSON and Excel
 We will suggest open ways of representing the various packets of data which could be stored and moved between systems:  clubs, membership lists, start lists, results of meetings.   We will provide example files, and tools online to check their validity.
 
 For each agreed JSON file format, we'll try to offer a common-sense Excel equivalent, so people can prepare data in a spreadsheet, paste it into a tool, and check its validity.
@@ -69,7 +69,7 @@ I accept there will never be one "winning system", because every event and leagu
 ## Results 
 We will offer a standard format for results (in flavours for races, relays, and T&F), and a hosted results service which accepts it.  Anyone preparing results in the right way can upload them and we will give back a nice link they can embed in their web site as an IFrame.
 
-#Events we hope to support
+# Events we hope to support
 We aim to develop with regular cycles, learning from real events.  A precursor system has aready handled one cross country season and a year of entries for county-level events.  The following events are in our calendar:
 
 Surrey League Cross Country (using somewhat legacy system, but feeding our new database).  This is critical as it gets us relationships with 40+ clubs.
