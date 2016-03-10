@@ -55,3 +55,16 @@ As part of the FIWARE project, We aim to build next-generation components using 
 If anyone knows their way around the Meteor framework, we'd love to talk.  Nothing could be better for real-time event management.
 
 
+
+
+
+# Contributors
+
+
+In vaguely chronological order...
+
+ - Nicola Fleet of Croydon Harriers - analysis, testing and design of system
+ - Peter Kennedy, BMAF IT Manager - analysis, design and testing, and a comprehensive athletes and clubs database to get us started
+ - Martin Alvarez-Espina provided a complete list of Spanish clubs and tracks
+ - Richard Holt of Momentum Sports - photos
+ - Gus Upton
