@@ -26,6 +26,7 @@ If you wish to go further and make some photos free for ANYONE to use to promote
 
 Note that for close-up pictures of children who are still young, whoever the photographer, we prefer parent's permission.
 
+Please email pics to <a href="mailto:opentrack@reportlab.com">opentrack at reportlab dot com</a>.    Don't send loads; just one or two each please.
 
 
 ## Web and Graphic Design
