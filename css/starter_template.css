@@ -25,6 +25,34 @@ body>.container {
   padding: 40px 15px;
   text-align: center;
 }
+.navbar-brand>img {
+	background-color: #f8f8f8;
+	padding: 5px;
+	border-radius: 50%;
+	margin-top: -10px;
+	height:70px;
+	display: inline-block;
+}
+.navbar-brand>span {
+	font-size: 1.5em;
+}
+@media (max-width: 768px) {
+	.navbar-brand>span.visible-xs {
+		display:inline-block!important;
+	}
+}
+@media (max-width: 1199px) and (min-width: 992px) {
+	.navbar-brand>span.visible-md {
+	    display: inline-block!important;
+	}
+}
+@media (min-width: 1200px) {
+	.navbar-brand>span.visible-lg {
+	    display: inline-block!important;
+	}
+}
+
+.navbar-nav>li>a { font-size:1.2em }
 /*
 .navbar-inverse {
 	background-color: #a0c041;
