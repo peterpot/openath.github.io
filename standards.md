@@ -5,7 +5,7 @@ permalink: /standards/
 tags: standards
 ---
 
-# The importance of open standards
+# The huge importance of open standards
 
 Lots of people are building systems to manage parts of the sport.  No one system will ever do it all.  It would be a huge step forward if we could agree common interchange formats.    
 
