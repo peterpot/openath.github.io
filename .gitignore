@@ -67,3 +67,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+img/.DS_Store
+.DS_Store
+dotrun.sublime-project
+dotrun.sublime-workspace
