@@ -98,23 +98,21 @@ There are some standard suffixes which are commonly used in results and rankings
 
 
 
-## Discipline (?) Codes
+## Event Codes
 If we are exporting the data from an online entry system, or the results of a meeting, we want to use common codes, so that the 400m is always represented the same way.
 
-A wise computer scientist once said "There are only two hard problems in computer science - cache invalidation and naming things".  Never mind the first one - it's really hard to pick names. Especially, it's hard to pin down the word "Event".   I am deliberately avoiding it, as it has too many connotations within athletics, as well as in IT generally.  
+A wise computer scientist once said "There are only two hard problems in computer science - cache invalidation and naming things".  Never mind the first one - it's really hard to pick names. Especially, it's hard to pin down the word "Event".  BY popular consensus we are calling these things "event codes".  
 
-For the purpose of THIS DOCUMENT, we will call 'High Jump' or '100m' <em>disciplines</em>.  By contrast, if you are looking at a programme, the "U13 Girls High Jump first round, Sat 10:35" is more of an "event", in the sense of "something that happens at a point in time".  We might call the latter 'CompEvent' or 'ProgEvent' (to be discussed)
+If you are looking at a programme, the "U13 Girls High Jump first round, Sat 10:35" is more of an "event", in the sense of "something that happens at a point in time".  We might call the latter 'CompEvent' or 'ProgEvent' (to be discussed)
 
-Anyway, we would like to have unambiguous short codes which can be used internally, or as search criteria.   We're not going to get the world to switch to them, but at least then people would only have to convert to ONE other standard.
-
-Our "first stab" is to use the codes from Power of Ten, which appear in the URL search parameters. However, we have introduced some slight changes.  In particular, we don't want the interpretation to depend on the case of a letter.  So 'm' meaning both Metre and Mile is dangerous.
+Our "first stab" is based on the codes from Power of Ten, which appear in the URL search parameters. However, we have introduced some slight changes.  In particular, we don't want the interpretation to depend on the case of a letter.  So 'm' meaning both Metre and Mile is dangerous.
 
 
     HJ, PV, LJ, TJ, SP, DT, HT, JT, WT - field events
     60,100,200,400,800,1500,3000,5000,10000 - track (and other distances for junior races).  Any raw number is assumed to be a number in metres
     60H, 80H, 100H, 110H, 200H, 300H, 400H - number + 'H' denotes hurdles
     2000SC, 3000SC - steeplechase
-    Dec, Hep, HepI, Pen, PenWt  - multi-events
+    DEC, HEP, HEPI, PEN, PENWT  - multi-events.  Case variations acceptable. 
     20KW, 50KW - walks
     4x100, 4x400 - track relays.  
 
@@ -138,8 +136,6 @@ As an example, we're taking entries now for a school fundraiser with three races
 The advantage of this is that one can compute a very rough speed and thus check if the input given is realistic.  For example, if you are taking online entries and your code for the Masters XC race is just "XC", you have no way to know if a predicted or actual time of "30.15" is realistic.  But if you know you are talkin about a 5 mile race, it's pretty clear that 30:15 was intended, and you can either reject or "fix" the input depending on your philosophy.
 
 The <a href="http://www.iaaf.org/records/toplists/">IAAF web site</a> uses 'slugs' - URL components - such as 'one-mile' and 'high-jump'.  These are certainly useful and could be added to a standard.
-
-There is an issue with using "Discipline" for these events, since UKA/IAAF has already defined the above as "Events". The athletics disciplines are Track (includes track and field events), Road, Race Walking and a group of disciplies covering Cross-Country, Trail, Fell/Hill and Mountain (not the same level of standardisation here). 
 
 The short codes will be OK for results but not for instance in competition programmes.  There it might be better to have standard short descriptions e.g. Shot Put, 100m Hurdles 
 
