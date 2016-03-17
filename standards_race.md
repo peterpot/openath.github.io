@@ -26,7 +26,6 @@ Here we will have a scheduled time, and a start list, and maybe finish line data
     "name": "Dash for the Splash 10k",
     "match": "e58f579e-a573-4e63-9512-9085bbc1b0fd",
     "slug": "dfts",
-    "text": "value",
     "status": "finished",
     "start_list": [
         {
@@ -64,6 +63,20 @@ Here we will have a scheduled time, and a start list, and maybe finish line data
     
 }
 {% endhighlight %}
+
+
+| Attribute | Type | Required? | Notes                 |
+|-----------|------|-----------|-----------------------|
+| pos       | int  | yes       | Finishing position.   |
+|           |      |           |                       |
+|           |      |           |                       |
+
+id | The system generating the json may use "id" for its own purposes
+ot_id | OpenTrack ID for the race.  We will provide a global ID service
+match  | An identifier for a larger match or meeting this race is part of. We suggest putting location and descriptive info at Match level
+name | Text name for this race
+slug | a short code 
+
 
 ## Results for scoring/checking
 
