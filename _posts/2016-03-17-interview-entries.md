@@ -98,6 +98,6 @@ There will, however, be assets that anyone can use from about May onwards:  stan
 
 ### How can other people help? 
 
-Check out our (Volunteer)[/volunteer/] page, or introduce yourself on the (forum)[http://forum.opentrack.com]!
+Check out our <a href="/volunteer/">Volunteer</a> page, or introduce yourself on the <a href="http://forum.opentrack.com/">forum</a>!
 
 
