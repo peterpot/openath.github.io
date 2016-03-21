@@ -13,12 +13,12 @@ A "match" is a collection of races, probably at a single location, on one day or
 ```json
   {
       "id": 123,
-      "ot_id": "1e330d72-4130-4996-9f6a-2f8458181f65",
+      "ot_id": "4071eadc-ef82-11e5-9ce9-5e5517507c66",
       "name": "Surry League, Division 2, 3rd round",
-      "series": "2fe677a-41ea-",
-      "season": "a40ec19c102396f4",
-      "location": [geocode],
-      "host_organisation": "805eb6de5b858927"
+      "series": "SURREYLG/DIV2",
+      "season": "WIN1516",
+      "location": [location_id],
+      "host_organisation": "GBR/THH"
       "slug": "dfts",
       "status": "finished"
   }
@@ -27,10 +27,10 @@ A "match" is a collection of races, probably at a single location, on one day or
 ```json
   {
       "id": 123,
-      "ot_id": "1e330d72-4130-4996-9f6a-2f8458181f65",
+      "ot_id": "3377a81c-ef82-11e5-9ce9-5e5517507c66",
       "name": "English Schools Athletics Championships",
-      "series": "2fe677a-41ea-",
-      "season": "a40ec19c102396f4",
+      "series": "ENGSCHOOLS",
+      "season": "SUM16",
       "slug": "dfts",
       "status": "finished"
   }
@@ -40,14 +40,23 @@ A "match" is a collection of races, probably at a single location, on one day or
 
 
 ```json
-  {
-      "id": 123,
-      "ot_id": "1e330d72-4130-4996-9f6a-2f8458181f65",
-      "name": "Winter 2015/6",
-      "start_date": "2015-01-01",
-      "end_date": "2016-03-31",
-      "slug": "dfts"
-  }
+  [
+    {
+        "id": "WIN1516",
+        "ot_id": "ea4c2154-ef81-11e5-9ce9-5e5517507c66",
+        "name": "Winter 2015/6",
+        "start_date": "2015-01-01",
+        "end_date": "2016-03-31",
+        "slug": "dfts"
+    },
+    {
+        "id": "SUM16",
+        "ot_id": "4071fd38-ef82-11e5-9ce9-5e5517507c66",
+        "name": "Summer 2016",
+        "start_date": "2016-04-01",
+        "end_date": "2016-08-31",
+        "slug": "dfts"
+    },
 ```
 
 # Series
@@ -55,8 +64,8 @@ A "match" is a collection of races, probably at a single location, on one day or
 
 ```json
   {
-      "id": 123,
-      "ot_id": "1e330d72-4130-4996-9f6a-2f8458181f65",
+      "id": "SURREYLG/DIV2",
+      "ot_id": "d2f6d7c4-ef81-11e5-9ce9-5e5517507c66",
       "name": "Surrey League, Division 2",
       "competition": "Surrey League",
       "slug": "dfts"
@@ -68,11 +77,11 @@ A "match" is a collection of races, probably at a single location, on one day or
 
 ```json
   {
-      "id": 123,
-      "ot_id": "1e330d72-4130-4996-9f6a-2f8458181f65",
+      "id": SURREYLG,
+      "ot_id": "34aaab36-ef81-11e5-9ce9-5e5517507c66",
       "name": "Surrey League",
       "type": "Cross-country",
-      "organiser": "02901b908639ac5f",
+      "organiser": "SLG",
       "slug": "dfts"
   }
 ```
