@@ -31,4 +31,4 @@ In the meantime, just to whet your appetite, here are some nice shots of how our
     </div>
 </div>
 
-We hope to see you soon on the track, and more importantly over the finish line soon! 
+We hope to see you on the track, and more importantly over the finish line soon! 
