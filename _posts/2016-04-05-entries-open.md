@@ -12,7 +12,7 @@ These athletic meets are some of the first where our new system can truly be unv
 
 With a wave of keen athletes making the most of the live online service on just the first night of opening, it is hopeful that we can help to surpass the great number of athletes these events boasted in 2015. 
 
-To get in early and secure your entry head to:  raceresults.reportlab.com/entries
+To get in early and secure your entry <a href="https://raceresults.reportlab.com/entries">head over here...</a>
 
 In the meantime, just to whet your appetite, here are some nice shots of how our mobile service looks! 
 
