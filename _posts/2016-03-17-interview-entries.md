@@ -18,15 +18,32 @@ The “Track” part is easy - we wanted to make it clear that we’re behind at
 
 ### What is wrong with entry systems at the moment? 
 
-<img class="img-rounded pull-right" style="border: 1px solid; width:30%" src="https://raceresults.reportlab.com/media/pix/RLIMG_790a6b5221a4d94d13f18c5b5a5da186.png" alt="Team declarations"/>
-
-In short, time consumption. Too much time and effort is spent by hard working individuals on declaring entries and processing results. We want to improve this for the benefit of everyone!
+In short, time consumption. Too much time and effort is spent by hard working individuals on entries, declarations and processing results. We want to improve this for the benefit of everyone!
 
 Working with Surrey County AA has shown us that to improve results, it has to start at the beginning - refining the entry system. Currently, far too much time is spent by volunteers validating data and doing computer-literate tasks; ranging from calculating age groups and figuring out how many U13 Boys want to run the 100m through to confirming if an athlete is a current club member. This is before the entries even begin!
 
-For the actual declarations, a team manager needs to quickly put in a team for an event.  With relays, you might enter a number of teams and pay with a couple of weeks to go. This system currently often works on paper declarations - often an unreadable scrawl like the one on the right - and hours of painstaking keying-in to get the results out. OpenTrack aims to revolutionise this and bring entries and results into the modern world. 
+In team situations, there's usually a "declaration".  This is where a team manager says who is doing what.   For track events, there can be a lot of people in different age groups and events.  With relays, you might enter a number of teams and pay with a couple of weeks to go, but you need to say who's doing what on the day.  And with cross-country, you don't know for sure who is turning up until the start.   
 
+The system currently often works on paper declarations - often an unreadable scrawl like the one on the left below - and hours of painstaking keying-in to get the results out. As an extreme example I remember Herne Hill's 125th anniversary, when they decided to bring 125 runners to a race, and a poor clubmate had to sit for about 5 hours after the race trying to make sense of the scrawl, Google people to make sure they existed and get the runners' names into a spreadsheet.
 
+We're now getting more than 80% of the entries put in by the team managers, either on race day at home or even at the start, as seen on the right below.  
+
+<div class="row">
+    <div class="col-md-6">
+        <img class="img-rounded" 
+            style="border: 1px solid; width:100%" 
+            src="https://raceresults.reportlab.com/media/pix/RLIMG_948c841441758167641efed29ca65c43.png" 
+            alt="Old style"/>
+    </div>
+    <div class="col-md-6">
+        <img class="img-rounded" 
+            style="border: 1px solid; width:100%" 
+            src="https://raceresults.reportlab.com/media/pix/RLIMG_2017921cd062c181375c61059af83c6d.png" 
+            alt="New style"/>
+    </div>
+</div>
+
+OpenTrack aims to revolutionise this and bring entries and results into the modern world. 
 
 
 ### How will the new entry system change things for the better?
@@ -81,6 +98,6 @@ There will, however, be assets that anyone can use from about May onwards:  stan
 
 ### How can other people help? 
 
-Check out our (Volunteer)[/volunteer/] page, or introduce yourself on the (forum)[http://forum.opentrack.com]!
+Check out our <a href="/volunteer/">Volunteer</a> page, or introduce yourself on the <a href="http://forum.opentrack.com/">forum</a>!
 
 
