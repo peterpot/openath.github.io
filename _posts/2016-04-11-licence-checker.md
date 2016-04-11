@@ -37,13 +37,17 @@ You can look up by first name, last name and date of birth, or by registration n
 Naturally, we built this kind of code into our own entries system, which is taking entries for four English counties as we speak.  You can do the same too.
 
 
-England Athletics has an interface ("API") which lets developers look up athletes, as we are doing here.  But it uses a complex protocol.  We made a simpler wrapper around it which works with very simple URL calls. We've 
-<a href="/licencecheck/#apidocs">explained this here</a>.   Hopefully anyone can now do checks in simple Javascript in a web form, as people enter races.
+England Athletics has an interface ("API") which lets developers look up athletes, as we are doing here.  But it uses a complex protocol, SOAP.  We made a simpler wrapper around it which works with very simple URL calls you can make in your browser. We've 
+<a href="/licencecheck/#apidocs">explained this here</a>.   
+
+Hopefully anyone can now do checks in simple Javascript in a web form, as people enter races; or write their own code within spreadsheets.
 
 If you'd like to use this, you're most welcome.  Please 
-<a href="mailto:opentrack@reportlab.com">email us</a> to let us know, or join in with our 
+<a href="mailto:opentrack@reportlab.com">email us</a> to let us know as a courtesy, or join in with our 
 <a href="http://forum.opentrack.run">athletics developers forum</a>.   
 
+It would also be really helpful if you can "like" or "share" the tool itself.
 
+I'd like to publicly say thanks to Richard While at England Athletics for his timely support and help with the API.
 
 - Andy Robinson
