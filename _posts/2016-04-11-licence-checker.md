@@ -7,7 +7,7 @@ author: Andy Robinson
 We're working to make it a bit easier to check competition licenses with our new 
 <a href="/licencecheck/">mobile licence checker</a>, and an easier <a href="/licencecheck/#apidocs">API for web developers</a>.
 
-It's well know within the sport that the rules of competition have just changed.  For some time races have offered discounts to registered athletes. But this summer some competitions will require strict checks of licence numbers before you can enter, and road races can offer discounts to registered athletes.  
+It's well known within the sport that the rules of competition have just changed.  For some time races have offered discounts to registered athletes. But this summer some competitions will require strict checks of licence numbers before you can enter, and road races can offer discounts to registered athletes.  
 
 England Athletics have several tools available on their site for bulk-checking but none that works well on a mobile device.  So we have built a mobile-friendly licence checker, which officials can bookmark and use on their phones at trackside this summer.
 
