@@ -1,7 +1,7 @@
 ---
 layout: default
 title: England Athletics Licence Checker
-permalink: /licencechecker/
+permalink: /licencecheck/
 tags: englandathletics licence check
 ---
 
@@ -46,6 +46,7 @@ tags: englandathletics licence check
 	</style>
 
 <div class="container">
+	<h1><span class="hidden-xs">England Athletics Licence Checker</span><span class="visible-xs">EA Licence Check</span></h1>
 <p class="hidden-xs">This page uses England Athletics' new Licence Checker service.  Anyone building an entry system can now validate athletes as they sign up!  </p>
 
 <div class="panel panel-default">
@@ -110,9 +111,9 @@ tags: englandathletics licence check
 <p>You can click on any of the URLs below, then edit it to change names or URNs.  The data packet which comes back is hopefully readable; "registered=true" tells you they are paid up.</p>
 
 <ul>
-  <li>Lookup by a valid URN: <a href="//test-raceresults.reportlab.com/ref/eacheck/proxy/?urn=2772389">?urn=2772389</a></li>
-  <li>Lookup by name and date of birth: <a href="//test-raceresults.reportlab.com/ref/eacheck/proxy/?fn=Andy&ln=Robinson&dob=1966-03-21">?fn=Andy&ln=Robinson&dob=1966-03-21</a></li>
-  <li>Lookup by a name slightly different to the one EA has stored<a href="//test-raceresults.reportlab.com/ref/eacheck/proxy/?fn=Andrew&ln=Robinson&dob=1966-03-21">?fn=Andrew&ln=Robinson&dob=1966-03-21</a></li>
+  <li>Lookup by a valid URN: <a href="//raceresults.reportlab.com/ref/eacheck/proxy/?urn=2772389">?urn=2772389</a></li>
+  <li>Lookup by name and date of birth: <a href="//raceresults.reportlab.com/ref/eacheck/proxy/?fn=Andy&ln=Robinson&dob=1966-03-21">?fn=Andy&ln=Robinson&dob=1966-03-21</a></li>
+  <li>Lookup by a name slightly different to the one EA has stored<a href="//raceresults.reportlab.com/ref/eacheck/proxy/?fn=Andrew&ln=Robinson&dob=1966-03-21">?fn=Andrew&ln=Robinson&dob=1966-03-21</a></li>
 </li>
 </ul>
 
@@ -181,7 +182,7 @@ tags: englandathletics licence check
 					kwargs.nocache=1;
 					
 				$.ajax({
-					url: 'http://test-raceresults.reportlab.com/ref/eacheck/proxy/',
+					url: 'http://raceresults.reportlab.com/ref/eacheck/proxy/',
 					data: kwargs,
 					crossDomain: true,
 					}).done(function(data, status, xhr){
