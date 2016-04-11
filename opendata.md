@@ -55,7 +55,7 @@ We aim to create basic location-and-name records for all known athletics tracks;
  - people can find tracks, clubs and running groups near them.
 
 ## Results of competitions
-It has been common practice for results to be published, aggregated in resulst and rankings sites, and it can be argued that nobody owns results.  But generally the results of sporting events have not carried any kind of copyright statement.
+It has been common practice for results to be published, aggregated in results and rankings sites, and it can be argued that nobody owns results.  But generally the results of sporting events have not carried any kind of copyright statement.
 
 We hope to establish the precedent that the results of competitions should be LABELLED by the event organisers as Open Data.  
 
@@ -68,7 +68,7 @@ Results will generally include the name, current affiliation and age group of th
 
 ## Created works:  documents, artwork and images
 
-We also aim to accumulate certain works which are created by humans but which are beneficial to the sport.   In these cases, we will ask the author to choose a suitable Open Data license; our recommendation is the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>, "CC-BY-4.0", which ensures the original author is identified and credited.    Examples may include
+We also aim to accumulate certain works which are created by humans but which are beneficial to the sport.   In these cases, we will ask the author to choose a suitable Open Knowledge license; our recommendation is the <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0</a>, "CC BY-SA 4.0", which ensures that the original author is identified and credited.    Examples may include
 
  - icons and web resources created by volunteers, for anyone in the sport to use
  - photos donated by the photographer for royalty-free use
@@ -87,10 +87,10 @@ You must make it clear that the data is available under the Open Database Licenc
 
 For further guidelines, please follow OpenStreetMap's attribution guidelines <a href="https://wiki.osmfoundation.org/wiki/License#How_should_I_attribute_you.3F">here</a>
 
-# Legal challenges and queries
+### Legal challenges and queries
 
 If you have a query about any of the information on our site - in particular whether we have the right to display the information, or its copyright status - then please contact opentrack@reportlab.com.  The matter will be reviewed by the company directors, normally within 2 working days.  If necessary we will take advice from recognised Open Data experts accredited by organisations such as the <a href="http://www.theodi.org/">ODI</a>
 
-# Factual challenges and queries
+### Factual challenges and queries
 
 We do not have the staff resources to research and check every fact in our database.  We aim to build mechanisms in due course to let you report issues on specific facts, generally through a "comment this page" facility, and to empower local "area experts" to review and adjudicate these.  In the meantime, if you are aware of a serious error, please report it by email to opentrack@reportlab.com.
