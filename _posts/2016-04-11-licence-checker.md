@@ -1,0 +1,49 @@
+---
+layout: post
+title: England Athletics Licence Checker
+author: Andy Robinson
+---
+
+We're working to make it a bit easier to check competition licenses with our new 
+<a href="/licencecheck/">mobile licence checker</a>, and an easier <a href="/licencecheck/#apidocs">API for web developers</a>.
+
+It's well know within the sport that the rules of competition have just changed.  For some time races have offered discounts to registered athletes. But this summer some competitions will require strict checks of licence numbers before you can enter, and road races can offer discounts to registered athletes.  
+
+England Athletics have several tools available on their site for bulk-checking but none that works well on a mobile device.  So we have built a mobile-friendly licence checker, which officials can bookmark and use on their phones at trackside this summer.
+
+<div class="row">
+    <div class="col-md-6">
+        <a href="/licencecheck/">
+        <img class="img-rounded" 
+            style="border: 1px solid; width:100%" 
+            src="https://raceresults.reportlab.com/media/pix/RLIMG_e441ec9b5bf6e4a78a37b56f2bdc784c.png" 
+            alt="Input screen"/>
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="/licencecheck/">
+        <img class="img-rounded" 
+            style="border: 1px solid; width:100%" 
+            src="https://raceresults.reportlab.com/media/pix/RLIMG_7ed3c02fce1c6836222b94d2639a999b.png" 
+            alt="Successful check"/>
+        </a>
+    </div>
+</div>
+
+You can look up by first name, last name and date of birth, or by registration number.  It also knows about common nicknames, so you don't have to know whether the athlete is registered as Andy or Andrew.
+
+## Building into your own web sites ##
+
+Naturally, we built this kind of code into our own entries system, which is taking entries for four English counties as we speak.  You can do the same too.
+
+
+England Athletics has an interface ("API") which lets developers look up athletes, as we are doing here.  But it uses a complex protocol.  We made a simpler wrapper around it which works with very simple URL calls. We've 
+<a href="/licencecheck/#apidocs">explained this here</a>.   Hopefully anyone can now do checks in simple Javascript in a web form, as people enter races.
+
+If you'd like to use this, you're most welcome.  Please 
+<a href="mailto:opentrack@reportlab.com">email us</a> to let us know, or join in with our 
+<a href="http://forum.opentrack.run">athletics developers forum</a>.   
+
+
+
+- Andy Robinson
