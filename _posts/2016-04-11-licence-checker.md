@@ -4,12 +4,12 @@ title: England Athletics Licence Checker
 author: Andy Robinson
 ---
 
-We're working to make it a bit easier to check competition licenses with our new 
+We're working to make it a bit easier to check competition licences with our new 
 <a href="/licencecheck/">mobile licence checker</a>, and an easier <a href="/licencecheck/#apidocs">API for web developers</a>.
 
-It's well known within the sport that the rules of competition have just changed.  For some time races have offered discounts to registered athletes. But this summer some competitions will require strict checks of licence numbers before you can enter, and road races can offer discounts to registered athletes.  
+It's well known within the sport that the rules of competition have just changed.  For some time road races have offered discounts to registered athletes. But <em>from April 2016 Track and Field athletes must be registered</em>, so strict checks will be required before you can enter.  
 
-England Athletics have several tools available on their site for bulk-checking but none that works well on a mobile device.  So we have built a mobile-friendly licence checker, which officials can bookmark and use on their phones at trackside this summer.
+England Athletics have several tools available on their site for bulk-checking but none that works well on a mobile device.  So we have built a mobile-friendly licence checker, which officials can bookmark and use on their phones this summer.
 
 <div class="row">
     <div class="col-md-6">
@@ -34,20 +34,20 @@ You can look up by first name, last name and date of birth, or by registration n
 
 ## Building into your own web sites ##
 
-Naturally, we built this kind of code into our own entries system, which is taking entries for four English counties as we speak.  You can do the same too.
+We built this kind of code into our own entries system, which is taking entries for four English counties at the time of writing.  (We can do the same for you - contact opentrack@reportlab.com if interested).
 
 
 England Athletics has an interface ("API") which lets developers look up athletes, as we are doing here.  But it uses a complex protocol, SOAP.  We made a simpler wrapper around it which works with very simple URL calls you can make in your browser. We've 
 <a href="/licencecheck/#apidocs">explained this here</a>.   
 
-Hopefully anyone can now do checks in simple Javascript in a web form, as people enter races; or write their own code within spreadsheets.
+We hope that web developers can now do checks at the time people enter races, using simple Javascript in a web form; or write their own code to do checks within spreadsheet macros.
 
 If you'd like to use this, you're most welcome.  Please 
 <a href="mailto:opentrack@reportlab.com">email us</a> to let us know as a courtesy, or join in with our 
-<a href="http://forum.opentrack.run">athletics developers forum</a>.   
+<a href="http://forum.opentrack.run">athletics developers' forum</a>.   
 
 It would also be really helpful if you can "like" or "share" the tool itself.
 
-I'd like to publicly say thanks to Richard While at England Athletics for his timely support and help with the API.
+I'd like to say a public thank-you to Richard While at England Athletics for his timely support and help with the API.
 
 - Andy Robinson
