@@ -110,4 +110,6 @@ h2, h3 {
 .post-meta {
 	font-weight: bold
 }
-
+ 
+.twitter-share-button iframe { float:right; }
+.fb_iframe_widget iframe { margin-left: 2em }
