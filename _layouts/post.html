@@ -7,6 +7,10 @@ tags: news
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="Mobile England Athletics licence checker!" data-via="open_trak" data-hashtags="opentrack">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
     <div
       class="fb-like row"
       data-share="true"
@@ -14,6 +18,7 @@ tags: news
       data-show-faces="true">
     </div>
   </header>
+  <br>
 
   <article class="post-content">
     {{ content }}

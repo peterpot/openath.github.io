@@ -3,8 +3,6 @@ layout: post
 title: England Athletics Mobile Licence Checker
 author: Andy Robinson
 ---
-<a href="https://twitter.com/share" class="twitter-share-button" data-text="Mobile England Athletics licence checker!" data-via="open_trak" data-hashtags="opentrack">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 We're working to make it a bit easier to check competition licences with our new 
 <a href="/licencecheck/">mobile licence checker</a>, and an easier <a href="/licencecheck/#apidocs">API for web developers</a>.
