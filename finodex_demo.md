@@ -12,8 +12,8 @@ tags: finodex
  * <a href="https://opentrack.info/v/dd354e92-65f5-4ca5-9a5c-b013ac887777/">View details for a specific track<a/>
 
 #### Competition Entries
-  * Surrey County Track and Field
-  * Surrey league results page, and a declarations page
+  * <a href="https://surreyleague.org/">Surrey County Track and Field</a>
+  * <a href="https://surreyleague.org/slm/race/120/">Surrey league results/declaration page</a>
   * Competition license checker
 
 #### Live Recording
@@ -25,10 +25,10 @@ tags: finodex
  * Check the race progress
 
 #### Community resources
- * Github openath
- * Forum page
+ * <a href="https://github.com/openath">Github openath</a>
+ * <a href="http://forum.opentrack.run/">Forum page</a>
  * News page
- * Twitter page
+ * <a href="https://twitter.com/open_trak">Twitter page</a>
  * Facebook page 
 
 #### Competitors
