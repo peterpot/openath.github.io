@@ -89,31 +89,40 @@ This is the experimental portion of our system.  We handles 4 trial races in Feb
 
 ### 4. Throwing and long jump competitions
 
+Field events (throws and jumps) are hard to follow unless you are competing. 
+It's hard to keep up with who is in the lead.  We're going to give everyone
+a TV-like experience.
+
 <div class="row finodex">
 	<div class="col-sm-3">
 		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/le/">Start list
 		<i class="fa fa-check-square-o" aria-hidden="true"> </i></a>
-		<p class="text-muted">View the main page of a field event </p>
+		<p class="text-muted">View the main page for a field event </p>
 	</div>
 	<div class="col-sm-3">
 		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/length/">Record some throws...
 		<i class="fa fa-flag-checkered" aria-hidden="true"> </i></a>
 		
-		<p class="text-muted">Allows for entering observations of a Shot Put demo event</p>
+		<p class="text-muted">Record the throws of a Shot Put demo event.
+		Officials will use this on a tablet.</p>
 	</div>
 	<div class="col-sm-3">
-		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/display/">Watch the results..
+		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/le/live/">Watch the results..
 		<i class="fa fa-tv" aria-hidden="true"> </i></a>
-		<p class="text-muted">See near-realtime results as they are entered</p>
+		<p class="text-muted">See near-realtime results as they are entered.
+		Great for parents, friends, team-mates and commentators.
+		</p>
 	</div>
 	<div class="col-sm-3">
 		 <a target="_blank" href="https://orion.reportlab.com:1026/v1/contextEntities/opentrack:length-event:cd5b84a3-a47f-4d32-afba-e1197ac8a4ee">Spy on FIWARE Orion...
 		<i class="fa fa-gears" aria-hidden="true"> </i></a>
-		<p class="text-muted">Inspect the raw data as it s registered and subscribed</p>
+		<p class="text-muted">Inspect the raw data as it is registered and subscribed. </p>
 	</div>
 </div>
  
-
+This will get it's first trial on May 7th (Oxford vs. Cambridge), and then in May 14th/15th (Surrey County Championships).  We're demoing to a board director of
+England Athletics, who was the throwing referee at the London 2012 Olympics,
+and giving the output to a top commentator.
 
 ## 4. Community resources
  * <a href="https://github.com/openath">Github openath</a>
