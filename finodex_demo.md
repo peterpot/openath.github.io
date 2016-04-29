@@ -72,6 +72,9 @@ Try our running <a href="http://www.reportlab.com/sp/agegrade.html">Age Grade ca
   * Competition license checker
 
 ## 3. Live Recording
+
+
+
 The results of <a href="">this race</a> were captured live, as people crossed the line, using a mobile device.
 
 This is the experimental portion of our system.  We handles 4 trial races in February/March for cross country.  And on 7th and 14th May, we're recording throwing and jumping competitions, under the eyes of an Olympic field judge.  The data is stored in Orion.
@@ -82,6 +85,15 @@ This is the experimental portion of our system.  We handles 4 trial races in Feb
  * Start the race
  * Use the recording/timekeeping functionality
  * Check the race progress
+
+### 4. Throwing and long jump competitions
+
+ * <a href="https://opentrack.info/c/uk2015/sm-sp/le/">Start list</a>
+ * <a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/le/length/">Record some throws...</a>
+ * <a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/display/">Watch the results..</a>
+ * <a target="_blank" href="https://orion.reportlab.com:1026/v1/contextEntities/opentrack:length-event:cd5b84a3-a47f-4d32-afba-e1197ac8a4ee">Spy on FIWARE Orion...</a>
+ 
+
 
 ## 4. Community resources
  * <a href="https://github.com/openath">Github openath</a>
