@@ -3,6 +3,7 @@ title: Finodex Demo
 layout: default
 permalink: /finodex_demo/
 tags: finodex
+css: //maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css
 ---
 
 # Finodex Demonstration
@@ -79,19 +80,38 @@ The results of <a href="">this race</a> were captured live, as people crossed th
 
 This is the experimental portion of our system.  We handles 4 trial races in February/March for cross country.  And on 7th and 14th May, we're recording throwing and jumping competitions, under the eyes of an Olympic field judge.  The data is stored in Orion.
 
- * <a href="https://fiware.opentrack.info/c/"> List all competitions</a>
- * <a href="https://fiware.opentrack.info/c/edit/">Create a competition called 'finodex test'</a>
- * <a href="https://fiware.opentrack.info/c/edit/">Create a new race</a>
+ * <a href="https://opentrack.info/c/"> List all competitions</a>
+ * <a href="https://opentrack.info/c/edit/">Create a competition called 'finodex test'</a>
+ * <a href="https://opentrack.info/c/edit/">Create a new race</a>
  * Start the race
  * Use the recording/timekeeping functionality
  * Check the race progress
 
 ### 4. Throwing and long jump competitions
 
- * <a href="https://opentrack.info/c/uk2015/sm-sp/le/">Start list</a>
- * <a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/le/length/">Record some throws...</a>
- * <a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/display/">Watch the results..</a>
- * <a target="_blank" href="https://orion.reportlab.com:1026/v1/contextEntities/opentrack:length-event:cd5b84a3-a47f-4d32-afba-e1197ac8a4ee">Spy on FIWARE Orion...</a>
+<div class="row finodex">
+	<div class="col-sm-3">
+		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/le/">Start list
+		<i class="fa fa-check-square-o" aria-hidden="true"> </i></a>
+		<p class="text-muted">View the main page of a field event </p>
+	</div>
+	<div class="col-sm-3">
+		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/length/">Record some throws...
+		<i class="fa fa-flag-checkered" aria-hidden="true"> </i></a>
+		
+		<p class="text-muted">Allows for entering observations of a Shot Put demo event</p>
+	</div>
+	<div class="col-sm-3">
+		<a target="_blank" href="https://opentrack.info/c/uk2015/sm-sp/display/">Watch the results..
+		<i class="fa fa-tv" aria-hidden="true"> </i></a>
+		<p class="text-muted">See near-realtime results as they are entered</p>
+	</div>
+	<div class="col-sm-3">
+		 <a target="_blank" href="https://orion.reportlab.com:1026/v1/contextEntities/opentrack:length-event:cd5b84a3-a47f-4d32-afba-e1197ac8a4ee">Spy on FIWARE Orion...
+		<i class="fa fa-gears" aria-hidden="true"> </i></a>
+		<p class="text-muted">Inspect the raw data as it s registered and subscribed</p>
+	</div>
+</div>
  
 
 
