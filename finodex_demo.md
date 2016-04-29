@@ -15,8 +15,21 @@ In all cases we have created as username "finodex" or "finodex@reportlab.com".  
 
 ## 1. Online entry system
 
-We are taking entries right now for key competitions in May 14/15 (UK County Championships).
+We are taking entries right now for key competitions in May.  These are recent copies of the real entry data.  Some notes below will guide you on what to do.
 
+<div class="row finodex">
+	<div class="col-sm-6">
+		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/surreytf/">Surrey County Championships<br>May 14/15
+		<i class="fa fa-flag-checkered" aria-hidden="true"> </i></a>
+		
+		<p class="text-muted">Please enter!  Real money not needed</p>
+	</div>
+	<div class="col-sm-6">
+		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/emacns/">European Masters Non-Stadia<br>Portugal, May 19-20
+		<i class="fa fa-check-square-o" aria-hidden="true"> </i></a>
+		<p class="text-muted">Be a team manager.  Approve your squad.</p>
+	</div>
+</div>
 
 ### Enter the Surrey County Championships
 
@@ -38,10 +51,10 @@ See the page for the
 
 ### Other stories
 
-We have several other journeys, but they need some understanding of the real-world process
+We have several other journeys, but they need some understanding of the real-world process, so we have omitted them today
 
- - relay team entry
- - cross country team manager: add athletes on the phone
+ - relay team entry - choose teams, then pay for squad
+ - cross country team manager: add athletes to your squad (on the phone, before a race)
 
 ## 2. Open Data
 
@@ -74,24 +87,18 @@ Try our running <a href="http://www.reportlab.com/sp/agegrade.html">Age Grade ca
 
 ## 3. Live Recording
 
+FIWARE Orion lets us record data on a massive scale.  Matches on the same Saturday all over Europe, with dozens of volunteers.  
 
 
-The results of <a href="">this race</a> were captured live, as people crossed the line, using a mobile device.
 
-This is the experimental portion of our system.  We handles 4 trial races in February/March for cross country.  And on 7th and 14th May, we're recording throwing and jumping competitions, under the eyes of an Olympic field judge.  The data is stored in Orion.
+### 3A. Throwing and long jump competitions - "Internet of Throws"
 
- * <a href="https://opentrack.info/c/"> List all competitions</a>
- * <a href="https://opentrack.info/c/edit/">Create a competition called 'finodex test'</a>
- * <a href="https://opentrack.info/c/edit/">Create a new race</a>
- * Start the race
- * Use the recording/timekeeping functionality
- * Check the race progress
+Throwing and horizontal jumps are hard to follow, unless you are competing. 
+It's hard to keep track of who is in the lead, or where your friend (or child!) is until it's over.  We're going to give everyone
+a TV-like experience and get the results out quickly.
 
-### 4. Throwing and long jump competitions
-
-Field events (throws and jumps) are hard to follow unless you are competing. 
-It's hard to keep up with who is in the lead.  We're going to give everyone
-a TV-like experience.
+This is a first step towards a full track and field management system, recording
+all event types and doing live match scores.
 
 <div class="row finodex">
 	<div class="col-sm-3">
@@ -123,6 +130,19 @@ a TV-like experience.
 This will get it's first trial on May 7th (Oxford vs. Cambridge), and then in May 14th/15th (Surrey County Championships).  We're demoing to a board director of
 England Athletics, who was the throwing referee at the London 2012 Olympics,
 and giving the output to a top commentator.
+
+### 3B.  Recording running races
+
+The results of <a href="">this race</a> were captured live, as people crossed the line, using a mobile device.
+
+This is the experimental portion of our system.  We handles 4 trial races in February/March for cross country.  And on 7th and 14th May, we're recording throwing and jumping competitions, under the eyes of an Olympic field judge.  The data is stored in Orion.
+
+ * <a href="https://opentrack.info/c/"> List all competitions</a>
+ * <a href="https://opentrack.info/c/edit/">Create a competition called 'finodex test'</a>
+ * <a href="https://opentrack.info/c/edit/">Create a new race</a>
+ * Start the race
+ * Use the recording/timekeeping functionality
+ * Check the race progress
 
 ## 4. Community resources
  * <a href="https://github.com/openath">Github openath</a>
