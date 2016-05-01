@@ -155,10 +155,51 @@ This is the experimental portion of our system.  We handles 4 trial races in Feb
 ## 6. Testimonials
 
 ### Main Youtube video
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SdTcpxOYVxA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_gHIwov5PKY" frameborder="1" allowfullscreen></iframe>
 
 ### Video testimonials
-(upload 4 more)
+
+Mary Drysdale, Race Director, Run2Rio
+
+
+<div class="row">
+	<div class="col-md-4">
+		<iframe width="300" height="170" 
+			src="https://www.youtube.com/embed/ePha0ymNTVE" frameborder="1" allowfullscreen>
+		</iframe>
+		Mary Drysdale, Race Director, Run2Rio
+	</div>
+	<div class="col-md-4">
+		<iframe width="300" height="170" 
+			src="https://www.youtube.com/embed/-OUKnYZDeuI" frameborder="1" allowfullscreen>
+		</iframe>
+		Matthew Kiernan, Team Manager and Race Organiser
+	</div>
+	<div class="col-md-4">
+		<iframe width="300" height="170" 
+			src="https://www.youtube.com/embed/mg3i2R1Hpk4" frameborder="1" allowfullscreen>
+		</iframe>
+		Nicola Fleet, Surrey County senior technical official
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-4">
+		<iframe width="300" height="170" 
+			src="https://www.youtube.com/embed/jbC9waKezI8" frameborder="1" allowfullscreen>
+		</iframe>
+		Pat Logan, Club coach (and multiple masters world sprint champion)
+	</div>
+	<div class="col-md-4">
+		<iframe width="300" height="170" 
+			src="https://www.youtube.com/embed/eezBbTLwLx8" frameborder="1" allowfullscreen>
+		</iframe>
+		Paul Weston, club coach, Croydon Harriers
+	</div>
+	<div class="col-md-4">
+	</div>
+</div>
 
 
 
