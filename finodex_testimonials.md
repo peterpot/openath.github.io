@@ -1,7 +1,7 @@
 ---
 title: Finodex Testimonials and Quotations
 layout: default
-permalink: /finodex_quotes/
+permalink: /feedback/
 tags: finodex
 css: //maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css
 ---

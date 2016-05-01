@@ -158,6 +158,8 @@ This is the experimental portion of our system.  We handles 4 trial races in Feb
 
 ## 6. Testimonials
 
+<a href="/feedback/">Click here</a> to see our feedback - quotations and testimonials
+
 ### Main Youtube video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_gHIwov5PKY" frameborder="1" allowfullscreen></iframe>
 
@@ -204,6 +206,13 @@ Mary Drysdale, Race Director, Run2Rio
 	<div class="col-md-4">
 	</div>
 </div>
+
+
+##  Open Data Policies
+
+http://opentrack.run/opendata/
+
+https://raceresults.reportlab.com/page/privacy-policy/
 
 
 
