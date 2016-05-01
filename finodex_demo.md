@@ -11,7 +11,11 @@ This is a script and demo guide for the FINODEX evaluators.
 
 We are building a complex platform with several different sites and workflows, so we can't just say "do this" to understand what we have built.  There are a number of things you can try out, all listed below.
 
-In all cases we have created as username "finodex" or "finodex@reportlab.com".  The password has been communicated separately.   You will be using a test server, so cannot affect live data.
+When asked to log in, you can use
+
+ - username:  finodex@reportlab.com
+ - password:  the name of Miguel's company, all lower case
+
 
 ## 1. Online entry system
 

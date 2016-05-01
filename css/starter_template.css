@@ -138,4 +138,8 @@ h2, h3 {
 	padding: .5em;
 }
 
+blockquote>footer {
+	text-align: right;
+	font-size: 100%;
+}
 
