@@ -9,7 +9,9 @@ css: //maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css
 # Finodex Demonstration
 This is a script and demo guide for the FINODEX evaluators.
 
-We are building a complex platform with several different sites and workflows, so we can't just say "do this" to understand what we have built.  There are a number of things you can try out, all listed below.
+We are building a complex platform with several different sites and workflows, so we can't just say "do this" to understand what we have built.  There are a number of things you can try out, all listed below.  Click the <button data-toggle="collapse" data-target="#showme">Instructions</button> button next to each feature for a step-by-step guide.
+
+<div id="showme">That's right!</div>
 
 When asked to log in, you can use
 
@@ -23,35 +25,58 @@ We are taking entries right now for key competitions in May.  These are recent c
 
 <div class="row finodex">
 	<div class="col-sm-6">
-		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/surreytf/">Surrey County Championships<br>May 14/15
+		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/surreytf/">Surrey County Championships<br>London, May 14/15 2016
 		<i class="fa fa-flag-checkered" aria-hidden="true"> </i></a>
 		
 		<p class="text-muted">Please enter!  Real money not needed</p>
+
+		<div id="surreytf" class="panel panel-default">
+			<div class="panel-heading">
+    			<h3 class="panel-title">
+    				<a data-toggle="collapse" data-target="#instructions-surreytf" 
+           href="#surreytf">
+          Instructions</a>
+    			</h3>
+  			</div>
+  			<div class="panel-body collapse" id="instructions-surreytf">
+				<ol>
+					<li>Click above to launch in a new window</li>
+					<li>See who is entered (links at top right) - this is real data</li>
+					<li>Enter yourself.  Try different birth dates.   To make a payment, use card number 4242 4242 4242 4242, any future date and any CVC number).   We expect to take almost a thousand entries between April 28th and May 5th, when they close.</li>
+					<li>We also made you a meeting organiser.  You can download the meeting info for planning purposes using the cream links on the right.  (Please delete the data file after - it's personal and we did not have time to generate realistic "fake people")
+						
+					</li>
+				</ol>
+
+  			</div>
+		</div>
 	</div>
 	<div class="col-sm-6">
-		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/emacns/">European Masters Non-Stadia<br>Portugal, May 19-20
+		<a target="_blank" href="https://test-raceresults.reportlab.com/entries/2016/emacns/">European Masters Non-Stadia<br>Portugal, May 20-22 2016
 		<i class="fa fa-check-square-o" aria-hidden="true"> </i></a>
 		<p class="text-muted">Be a team manager.  Approve your squad.</p>
+		<div id="surreytf" class="panel panel-default">
+			<div class="panel-heading">
+    			<h3 class="panel-title">
+    				<a data-toggle="collapse" data-target="#instructions-emacns">
+          Instructions</a>
+    			</h3>
+  			</div>
+  			<div class="panel-body collapse" id="instructions-emacns">
+  				If you log in, we have given you rights to manage/approve the Portuguese and Spanish teams.
+
+				<ol>
+					<li>Browse through the entries</li>
+					<li>Try the "team manager validation" (right side). </li>
+					<li>Go to Spain or Portugal.  Approve or disapprove, leave a note</li> 
+				</ol>
+				It's your job to tell us if the athletes entered are known to your federation, are the correct age, and have paid their federation fees.  (Sometimes the 80-year-olds
+				make mistakes!) This used to involve a lot of emailed spreadsheets, sent repeatedly back and forth, but this year, it's just a click.
+
+  			</div>
+		</div>		
 	</div>
 </div>
-
-### Enter the Surrey County Championships
-
-The event page is <a href="https://test-raceresults.reportlab.com/entries/2016/surreytf/">here.</a>
-
- 1. See who is entered (links at top right) - this is real data
- 2. Enter yourself.  Try different birth dates.   To make a payment, use card number 4242 4242 4242 4242, any future date and any CVC number).   We expect to take almost a thousand entries between April 28th and May 5th, when they close.
-
- 3. We also made you a meeting organiser.  You can download the meeting info for planning purposes.  (Please delete the data file after - it's personal and we did not have time to generate realistic "fake people")
-
-### Be a team manager in Portugal
-
-See the page for the 
-<a href="https://test-raceresults.reportlab.com/entries/2016/emacns/">European Masters Non-Stadia</a> on May 18-20 in Portugal.  If you log in, we have given you rights to manage/approve the Portuguese and Spanish teams.
-
- 1. Browse through the entries
-
- 2. Try the "team manager validation" (right side).  It's your job to tell us if the athletes entered are known to your federation, are the correct age, and have paid their federation fees.  This used to involve a lot of emailed spreadsheets, but this year, it's just a click.
 
 ### Other stories
 
@@ -62,30 +87,84 @@ We have several other journeys, but they need some understanding of the real-wor
 
 ## 2. Open Data
 
-This summer we will release and start to crowdsource open data sets of tracks and clubs.
+This summer we will release and start to crowdsource open data sets of _tracks_ and _clubs/associations_.  These are important because the sport needs common IDs to build databases.  
 
-### Athletics Tracks data set  ("TrackAdvisor"?)
-Browse our database of <a href="https://opentrack.info/v/">4000 running tracks in Europe</a>:  we have quite good coverage in UK and Spain.  Some are false positives.  The crowd can help us move pins, add missing ones and remove false alarms.  They can then begin to fill in technical information, disrepair, opening hours, when it's crowded. This will help people to
- - find a place to train
- - plan competitions
- - help governing bodies to plan where investment is needed
+They are a step towards getting the actual results labelled as Open Data&trade;. We will let people get used to the idea of open reference data first.
 
-It will also let everyone have a clear code for every venue when exchanging results.
+<div class="row finodex">
+	<div class="col-sm-6">
+		<a target="_blank" href="https://opentrack.info/v/">
+		Track directory - TrackAdvisor?<br>
+		<img src="/img/trackfinder.png" width="300"></a>
+		
+		<p class="text-muted">Click and explore. UK and Spain are best.</p>
 
-### Clubs and Organisations data set:  
+		<div id="surreytf" class="panel panel-default">
+			<div class="panel-heading">
+    			<h3 class="panel-title">
+    				<a data-toggle="collapse" data-target="#instructions-tracks">
+          Background - how and why?</a>
+    			</h3>
+  			</div>
+  			<div class="panel-body collapse" id="instructions-tracks">
+	  			We started with OpenStreetMap, and cross-referenced to federation
+	  			lists of stadia, based on geocoded addresses.
+
+	  			Why? First of all, there's nothing like this.  The UK and USA have really old, unmaintained sites.  It's useful to runners
+
+	  			Secondly, we'll let people choose the "usual name" and have a unique code for every track. When building databases of results
+	  			or advertising fixtures, a common.
+
+	  			Stadia can include opening hours, who manages it, what needs
+	  			repair, when there are schoolkids in the way.  Anyone can contribute.
+
+	  			We'll expand to clubhouses, regular race courses and "places groups meet".  NOT Strava or MapMyRun.
+
+	  			This should quickly make us useful.
+	  			</div>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<a target="_blank" href="https://raceresults.reportlab.com/ref/eapick/">
+		Clubs and Organisations<br>
+		<img src="/img/clubpicker.png" width="300"></a>
+		
+		<p class="text-muted"></p>
+
+		<div id="surreytf" class="panel panel-default">
+			<div class="panel-heading">
+    			<h3 class="panel-title">
+    				<a data-toggle="collapse" data-target="#instructions-clubs">
+          Background - how and why?</a>
+    			</h3>
+  			</div>
+  			<div class="panel-body collapse" id="instructions-clubs">
+  			<ul>
+  				<li>We started with 3000 organisations in the sport in the UK, and
+	  			have had 250 clubs contributed from Spain.</li>
+
+	  			<li>To take entries accurately, we need to let people CHOOSE a club,
+	  			not just type in free text.  We need IDs for the clubs.</li>
+
+	  			<li>We will let each club manage its listing, and advertise their
+	  			training nights, public contacts and so on - all as Open Data</li>
+
+	  			<li>They can "choose their code", first come first served in each country, in 
+	  			results, and nice flags and logos.  Anyone gets to use these
+	  			in results presentation.</li>
+
+	  			<li>We give them nice web widgets to embed in their site, so they
+	  			can present things with no web skills, and we get more data.</li>
+	  			
+	  		</ul>
+  			</div>
+		</div>
+	</div>
+</div>
 
 
 
-Try our running <a href="http://www.reportlab.com/sp/agegrade.html">Age Grade calculations</a> to see how good you are for your age - try on your mobile phone - in English and Portuguese.   We got the maintainer to officially make these factors open data - see <a href="http://www.howardgrubb.co.uk/athletics/data/wavacalc15.xls">last tab of this Excel sheet</a>.  This calculation can be done automatically in any results we present.
-
-
-
-
-#### Athletics tracks
- * <a href="https://opentrack.info/v/">Search for a track</a> - we have quite good coverage in UK and Spain.  Some are false positives.
- * <a href="https://opentrack.info/v/dd354e92-65f5-4ca5-9a5c-b013ac887777/">View details for a specific track<a/>
-
-#### Competition Entries
+## Competition Entries
   * <a href="https://surreyleague.org/slm/race/120/">Surrey league results/declaration page</a>
   * Competition license checker
 
@@ -215,5 +294,12 @@ http://opentrack.run/opendata/
 https://raceresults.reportlab.com/page/privacy-policy/
 
 
+## Market research, useful data
 
+Sport England <a href="https://www.sportengland.org/media/3912/1x30_sport_14plus_factsheet_aps9v2.pdf">Active People Survey</a> - see page 3
 
+KU Leuven <a href="http://faber.kuleuven.be/spm/">Sport Policy &amp; Management</a> unit - see SPM 10 (name needed to download)
+
+<a href="http://www.playthegame.org/fileadmin/image/PtG2013/Presentations/30_October_Wednesday/Jeroen_Scheerder_30_ok_11.30_Spejlsalen.pdf">RUNNING ACROSS EUROPE - The European sports model revisited</a> - Scheerder and Breedveld.  Presentation
+
+Demographics of runners - Competitor Group <a href="http://cdn.competitorgroup.com/wp-content/uploads/2016/04/2016_Competitor_MediaKit_Updated.pdf">Media Kit</a>

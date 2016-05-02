@@ -143,3 +143,6 @@ blockquote>footer {
 	font-size: 100%;
 }
 
+.panel-body {
+	text-align: left;
+}
