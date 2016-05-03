@@ -129,8 +129,10 @@ h2, h3 {
 }
 .row.finodex>.col-sm-3>a:hover, .row.finodex>.col-sm-6>a:hover {
 	border-radius: 10px;
-	border: 1px #f26522 solid;
-	margin-top: .4em;
+	border: .01em #f98542 solid;
+	margin-top: .45em;
+	margin-bottom: .45em;
+	background-color: #fff6ef;
 }
 .row.finodex>.col-sm-3>a>i, .row.finodex>.col-sm-6>a>i {
 	display: block;
