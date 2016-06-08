@@ -139,7 +139,10 @@ h2, h3 {
 	font-size: 2.3em;
 	padding: .5em;
 }
+blockquote {
+	border-left: none;
 
+}
 blockquote>footer {
 	text-align: right;
 	font-size: 100%;
@@ -147,4 +150,30 @@ blockquote>footer {
 
 .panel-body {
 	text-align: left;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+p {
+	font-size: 1.3em;
+}
+
+.highlight {
+	font-weight: bold;
+	color: #f26522;
 }
