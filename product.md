@@ -5,7 +5,7 @@ permalink: /product/
 tags: product description, entries, raceresults, OpenTrack  
 ---
 <br>
-Please note that OpenTrack is still in early development - beware of bugs. 
+Please note that OpenTrack is still in early development, please beware of bugs. 
 
 # Product introduction
 
@@ -26,7 +26,7 @@ Making information open greatly benefits the sport and opens up possibilities to
 We aim to have open reference data, with unique IDs, on athletic organisations and other race-organising bodies, as well as clubs and venues. 
 
 ## Open Libraries
-In order to benefit the sport, we will share useful building blocks for anyone building systems. This may include web front end elements, such as Javascript. We will set up a separate page of useful components. Data will also be made available in Github pages.
+In order to benefit the sport, we will share useful building blocks for anyone building systems. This may include web front end elements, such as Javascript. We will also set up a separate page of useful components. Data will also be made available in Github pages.
 
 ## Open Standards:  JSON and Excel
 We will also suggest methods of representing the various packets of open data which could be stored and moved between systems:  clubs, membership lists, start lists, results of meetings. We will provide example files, and tools online to check their validity.
