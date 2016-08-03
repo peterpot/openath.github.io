@@ -1,234 +1,65 @@
 ---
 layout: post
-title: FIWARE Orion
+title: England Athletics API and competition entry checks
 author: Andy Robinson
 ---
 
-FIWARE's Orion Context Broker has grown to be a key part of our architecture.  Since we're trying to encourage open source developers to collaborate with OpenTrack, I'm going to try and explain what it is, why we chose it, and what it can do.
+We're starting to do stricter checks for competition entries.  This post summarises our suggested approach and some of the issues we expect to run into.  I suspect many other people are doing the same and welcome discussion 
+<a href="http://forum.opentrack.run/">on our forum</a>
 
-In brief, it's a readymade ReST interface to MongoDB, with publish-and-subscribe features. It gives us a readymade data collection mechanism for scores and results  
+The story so far:
 
-## What is FIWARE?
+ - rules are changing, and strict checks of status are needed for many competitions.  This was supposed to start on April 1st.
+ - EA allowed a "grace period" of 3 months, during which their API incorrectly would say that people were current and paid up when they were in fact lapsed.  This prevented us from testing any validation software until July because we couldn't get "the truth"!  However, since July, it has been "telling the truth" again.
+ - We're now opening up entries for some county-level events where fairly strict checks are desirable, and making this available in our system generally.
 
-FIWARE is a large European Union-funded project to help entrepreneurs build new solutions on a cloud computing platform.  This is the <a href="https://www.fiware.org/developers-entrepreneurs/">least confusing introduction</a> I have found:
-<blockquote>
-FIWARE provides an enhanced OpenStack-based cloud environment plus a rich set of open standard APIs that make it easier to connect to the Internet of Things, process and analyse Big data and real-time media or incorporate advanced features for user interaction.
-</blockquote>
+It's not as simple as one would like.  There is some interplay between two factors:  your status, and how strict the competition wants to be.
 
-To some extent, it has invented its own jargon which is very confusing to outsiders.  Several years ago, they surveyed and tried to find technical gaps and to work out what sort of services would be needed to enable and accelerate economic growth.  Several years R&amp;D followed. 
+## How strict is the meeting?
 
-## Who is using it?
-In the last 2 years, hundreds of small businesses have received funding to launch innovative ideas, but only if they use some FIWARE technologies and/or Open Data.  We are one of them.  
+We're working to offer four levels:
 
-## What is Orion?
+**STRICT**: You can't get past the first step unless we have found you by your England Athletics number, or by name and date of birth, and all the data agrees.
 
-Here's the intro paragraph from the documentation.  Once you get into the details, it's excellent - correct and comprehensive with good getting-started guides - but in my opinion, it gives an average developer NO CLUE what it's there for.  What do you think?
+**DRAFT**: we will let you fill in the entry, but we won't let you pay until it checks out.  You can at least then discuss the issue with the organiser and there is a possibility to handle it offline.
 
-<blockquote>
-Orion is a C++ implementation of the NGSI9/10 REST API binding developed as a part of the FIWARE platform.<br>
+**WARN**: we will warn people who are lapsed or not found, and make the status highly visible to the organiser and the people entering on the start lists.  This might leave time to sort out the issue before the meeting.
 
-Orion Context Broker allows you to manage all the whole lifecycle of context information including updates, queries, registrations and subscriptions. Using the Orion Context Broker, you are able to register context elements and manage them through updates and queries. In addition, you can subscribe to context information so when some condition occurs (e.g. a context element has changed) you receive a notification. These usage scenarios and the Orion Context Broker features are described in this document.
-</p>
+**DONTCARE**: this may be appropriate for charity events, fun runs, open meetings and anything where we don't want to limit it.
 
-</blockquote>
+Currently we are not handling road races, but as soon as we get one, we can apply the discount for people who check out OK, so they will be motivated to register.
 
-Disclaimer:  I still haven't a clue what "context information" means in this, er, context; and after a quick glance decided that life is too shart to learn about NGSI9/10. 
+The STRICT mode is likely to cause a few issues.  Currently we have no way to check Scottish and Northern Irish athletes (although we'd love to add this); foreign guests will be banned; people may not be able to enter if their data at EA is incorrect; and so on.  For this reason, I suspect the DRAFT one will be more popular.
 
-This was a slight problem entering the FIWARE programme, because one has to select from a large catalogue of technologies, and it could take a good hour or two of drilling into the docs before finding out what they actually did.  It's a bit different to how people promote SAAS solutions, where one usually starts with a good use case, screen shots if possible, and something to suck developers in.
 
 
-## Plain English, please
-Here's my try:
-<blockquote>
-Orion is designed for collection Internet-of-Things data on a large scale.  It also allows web applications to subscribe and be notified of changes.
-</blockquote>
-At a technical level, it's a web server implementing a ReST API in front of MongoDB.   You can make calls to create documents, search and query in various ways (including geographically), and update individual attributes of documents.   
-It also implements a publish/subscribe model.  So you can register your app to be notified every time some document changes, and for the next 30 days, Orion will send a POST request to your server with the newest version of the document whenever it changes  
+## Possible status check results
 
-## How does this work for us?
-Our use case is collecting real-time results and scores from sporting events. Potentially this could happen on a wide scale.  Sporting events might be happening all over Europe on a busy Saturday or Sunday morning, with teachers and volunteers uploading data almost simultaneously.   
+The next area is what happens when we check an athlete.  We do this when they enter, but we also need ways to re-check later, as somebody might be able to sort out a problem before entries close, and because organisers still take some paper entries.  So we have a backup routine which can check every athletes that is NOT OK at any time after entry.  (If we're in the STRICT mode, this won't help much.)
 
-We figured we could trust Orion, because it's already collecting huge amounts of data from temperature sensors in cities all over Spain, millions of cows and beehives, and other things that would never occur to you until you attend a FIWARE meetup.   It's written in C++, and behind the scenes MongoDb is probably one of the most scalable collection mechanisms.  
+We aim to have a fixed set of status values stored against each athlete, plus an optional detailed message.  We have come up with several situations:
 
-But the icing on the cake was the Publish/Subscribe mechanism, which had an unexpected social benefit for the project.
+**OK**: The API tells us that you are registered, AND at least two out of the first name, last name and date of birth agree.  
 
-Chris Dack is a national-standard Shot Putter in the UK, who's also pretty handy with Javascript and Node.js. He was the first person outside the team to start contributing to the code, and he got the ball rolling with our <a href="/2016/04/08/live-field-events.html">field events display code</a>. 
+**MISMATCH**:  The API says somebody is registered, but the first name, last name and/or age which come back disagree with what was input.   What we've done here is to say "two facts out of three are good enough".  So if the only difference was *Andy* versus *Andrew*, or a woman has changed her maiden name, we'll class it as OK.  Otherwise we'll class it as a MISMATCH.  This should stop people just using someone else's number.
 
-Chris found Orion useful right away, because once we'd written some data capture apps and were uploading to Orion, he could access it right away, and work independently on his own node.js implementation. He just subscribed to the competition as we set it up, and thereafter, he had all the data he needed to play with. We didn't need to write docs, sit side-by-side for a few hours, grant passwords or anything.
+**LAPSED**: The API says you haven't paid your registration fee.
 
-We realised that if we stored the live data in Orion - and why not? It's all supposed to be Open Data - it would open the door to a lot of collaborators doing their own thing in terms of display.
+**NOTFOUND**: The API doesn't know you you are.
 
-Last month, a few of us were in Eindhoven, NL, recording the throws at a competition.  Each time our volunteer tapped a throw into a page on her phone, the throw distance was sent up to Orion.   Orion then relayed the state of that competition - a smallish chunk of JSON - onto our main server, but also onto various experimental ones as well.  I didn't even realise that Chris was around that day, but he had registered and was working on checking that his lightweight node server could handle the live feed correctly.
+**ERROR**: Something unexpected happened - maybe in our code, maybe trying to access the API, maybe the API returned something we didn't expect.
 
-So, FIWARE's Orion allows an Englishman in South London to spy on fit Dutch girls as they throw things around, in real time. 
+We're basically going to do these checks for any meeting other than the *DONTCARE* ones, and store the results.  So the status will be available online and in downloaded start lists.
 
-## What other choices were there?
+## Gaps and flaws
 
-We're funded by FIWARE so had to choose some of their technology to use.  Otherwise, we could have created our own athletics-specific APIs in our own Django server.  But I don't think the Pub/Sub mechanism would have occurred to us for quite a long time, and we'd have probably spent a long time debugging things.  And we would no doubt have resolved to produce documentation eventually, but failed to get around to it, or undergone a lot of churn, so it would have been a long time before external developers could join in.   Using a mature product helped - when you get past the first couple of pages, Orion is now very well-documented.   
+The main problem I can see now is that we have no way to check the status of Scottish and Northern Irish athletes.  Imagine a Scottish athlete whose first claim club is in Scotland, but who has been living in Surrey for a year.  They should be able to enter, but we can't check them, as there is no unified UK system.  I imagine this problem would be much more prevalent in the Northern League.
 
+I will note that we would be very happy to provide a unified API, if Scottish Athletics or Athletics Northern Ireland pick up the phone and want to share lists of registered athletes with us.  They are already doing so with the BMAF and it's technically easy.
 
-## Using Orion from Python
 
-We found that we 
-
-
-## Using Orion from Javascript
-
-Orion was designed for collecting Internet-of-Things data.  We started off with our Python application server posting information into Orion, but pretty quickly we realised that a mobile device or browser would be the ideal client.  Somebody will be at the side of a track, or in a field, tapping numbers into a web page.  We just want them to be uploaded and stored securely.  So we cut our own server out of the picture and can talk straight to Orion.
-
-As a simple ReST API, it's possible to just point a browser at Orion and see the data within it (if you're running your own Orion).  It's no trouble to fetch an object, in a way very similar to Firebase.
-
-But when it's time to update, at this point we ran into a small bug.  When browsers perform certain verbs (PUT and POST), they typically send a "pre-flight" OPTIONS request first to ask the server what it can respond to.  Orion doesn't yet handle this correctly.  
-
-Our workaround was to produce a small Python WSGI server - probably about 40 lines of code - which we ran in front of Orion.  This implemented the missing methods, and at this point we could do everything from a browser that we could from a server.
-
-
-## Security
-
-Orion itself has no security. It's designed to be run behind a proxy server which provides security and access control.   Used within the FIWARE Lab, they run another service build on node.js, "PEP Proxy Wilma", in front of it.  Wilma checks that you have obtained a token from the FIWARE lab and put it in the headers.  At that point, it lets you through.  However, there is no fine-grained security in the FIWARE Lab instance; if you're careless with your object IDs, you can overwrite or delete some other user's data. Fair enough - it's just for training.
-
-We're Python people, not Node people, so rather than learning about another third party product and how to configure it, we just wrote a few more lines of Python and extended our WSGI server.   We can serve up the tokens so that a browser can make a preliminary login call, get a token, and embed it on future requests.  In our context, it makes sense to control which sports officials can upload results, but perhaps to let anyone browse the results or register to be notified.  We think it's easier to write a little server class with wrappers around certain methods than to have a general-purpose configurable system and a declaration language.
-
-
-
-
-# How we're running it
-
-This is by no means the best way of doing things, but it didn't take long to set up and seems to work.
-
-We set Orion up on our own Ubuntu servers using a Docker image.  We already use MongoDB, so we configured it to talk to a real, persistent MongoDB instance.  Docker was new to us, but works well.  The detup details
-
-
-
-## Detailed setup notes
-(from Robin Becker, Chief Engineer, working on Ubuntu 14.04)
-
-    0) install mongodb
-
-    1) Install docker
-
-
-    2) create a working area to contain our own Docker file.
-
-    rptlab@denali:~/devel/orion
-    $ cat Dockerfile-80
-    FROM fiware/orion
-    WORKDIR /
-    ENTRYPOINT ["/usr/bin/contextBroker","-fg", "-multiservice", "-corsOrigin", "__ALL"]
-    EXPOSE 1026
-
-    we added the -corsOrigin __ALL to the command line to allow cross site connection.
-
-
-    3) build a docker image called rl/orion
-
-    docker build -f  Dockerfile-80 -t rl/orion .
-
-    our image requires no resources so . just refers to the path containg the Dockerfile (Dockerfile-80).
-
-    4) Check that our image now exists with docker images
-    $ docker images
-    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-    ubuntu              trusty              90d5884b1ee0        8 weeks ago         188 MB
-    fiware/orion        latest              fe1ffdce3f49        8 weeks ago         277.9 MB
-    rl/orion-http       latest              b5b472b0c13d        8 weeks ago         277.9 MB
-
-    the ubuntu & fiware/orion images are constructed by the build process which results in our rl/orion image.
-
-    5) Run the docker image to create an executing server. We needed to use the local mongo so we have net == host
-
-    docker run -d --net=host -p1026:1026 rl/orion-http orion-http
-
-    6) test local connection on port 1026.
-    rptlab@denali:~/devel/orion
-    $ curl localhost:1026/version
-    {
-      "orion" : {
-      "version" : "1.0.0-next",
-      "uptime" : "13 d, 18 h, 46 m, 2 s",
-      "git_hash" : "58a6b5e250cc5ced103f2ae7413a22ff73d602f6",
-      "compile_time" : "Wed Apr 27 06:15:32 UTC 2016",
-      "compiled_by" : "root",
-      "compiled_in" : "838a42ae8431"
-    }
-    }
-
-    7) Set up a backend proxy using traditional python virtualenv; our server which is uwsgi based is a simple wsgi app and is started thusly
-            $ENVDIR/bin/uwsgi \
-                --daemonize=$ENVDIR/logs/uwsgi.log \
-                --home=$ENVDIR \
-                --chdir=$ENVDIR \
-                --pidfile=$ENVDIR/tmp/uwsgi.pid \
-                --uwsgi-socket=0:13080 \
-                --workers=20 \
-                --master \
-                --cheaper-algo=spare \
-                --cheaper=2 \
-                --cheaper-initial=2 \
-                --cheaper-step=1 \
-                --logdate='%Y/%m/%d %T' \
-                --log-format-strftime \
-                --disable-logging \
-                --module=proxy.wsgi:application
-
-    here --uwsgi-socket=0:13080 says we listen to port 13080 on all interfaces.
-
-    The proxy code may be found at  https://hg.reportlab.com/hg/orion-proxy/.
-
-    The latest proxy does allow for fiware style tokens to be used for validation our tokens are generated from a one time list of random letters. This 'feature' is turned on by having an environment variable NEED_TOKENS=1 at server start. The passwords are probably not that secure, but the is all internal behind the https transport layer.
-
-    ============================nginx server
-    8) We now  have our orion http server on port 13080. We connect it as a backend to an https/http nginx running on a different machine. So on that machine we have an nginx server running with a sitefile corresponding to our listening server the site file looks like this
-
-    $ cat orion1.reportlab.com
-    server {
-            server_name orion1.reportlab.com;
-            listen 80;
-            charset utf-8;
-            error_page 404 /404.html;
-            root    /home/rptlab/website/orion1.reportlab.com/live/htdocs;
-            location /404.html {
-                    root /home/rptlab/etc/nginx/html/;
-                    }
-            error_page 500 502 503 504 /50x.html;
-            location /50x.html {
-                    root /home/rptlab/etc/nginx/html/;
-                    }
-            location /favicon.ico {
-                    alias /home/rptlab/website/orion1.reportlab.com/live/htdocs/favicon.ico;
-                    }
-            location / {
-                    uwsgi_pass 192.168.0.251:13080;
-                    include /etc/nginx/uwsgi_params;
-                    }
-            }
-    server {
-            listen 443 ssl;
-            include /home/rptlab/etc/certs/reportlab.com/reportlab-ssl.nginx;
-            server_name orion1.reportlab.com;
-            charset utf-8;
-            error_page 404 /404.html;
-            root    /home/rptlab/website/orion1.reportlab.com/live/htdocs;
-            location /404.html {
-                    root /home/rptlab/etc/nginx/html/;
-                    }
-            error_page 500 502 503 504 /50x.html;
-            location /50x.html {
-                    root /home/rptlab/etc/nginx/html/;
-                    }
-            location /favicon.ico {
-                    alias /home/rptlab/website/orion1.reportlab.com/live/htdocs/favicon.ico;
-                    }
-            location / {
-                    uwsgi_pass 192.168.0.251:13080;
-                    include /etc/nginx/uwsgi_params;
-                    }
-            }
-
-
-    obviously we could just remove the http access and be more secure. We test the setup with traditional sudo nginx -t and if OK sudo service nginx restart.
-
-
+As noted, discussion of registration-checking issues is welcome 
+<a href="http://forum.opentrack.run/">on our forum</a>
 
 
 
