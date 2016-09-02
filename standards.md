@@ -216,6 +216,8 @@ At a technical level, we feel we could allow codes of up to 5 characters.  (3 is
 
 We are working on a global database of organisations - meaning anyone who can put on a competition.  Most organisations in athletics have a pretty clear acronym - WADA, IAAF, IOC, WMA, and within the UK EA, SEAA, BMAF etc.  These will be stored alongside clubs and given Opentrack IDs and Codes.  It will then be possible to build up a map of which organisations are affiliated to which governing bodies.
 
+England Athletics and European Athletics can fight it out for who gets EA.
+
 Peter Kennedy has bravely volunteered to maintain this data!
 
 
