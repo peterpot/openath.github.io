@@ -169,7 +169,7 @@ blockquote:after {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-p {
+p, li {
 	font-size: 1.3em;
 }
 
