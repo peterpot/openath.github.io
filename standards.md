@@ -116,6 +116,16 @@ Our "first stab" is based on the codes from Power of Ten, which appear in the UR
     20KW, 50KW - walks
     4x100, 4x400 - track relays.  
 
+For field events, there is usually a default weight for a given age group and gender, but we can indicate a specific weight of implement as follows.  (We followed Power of Ten, who use these for filter parameters in URLs).  
+
+    SP7.26k, SP6K, SP5K, SP4K, SP3K
+    DT2K, DT1.75K, DT1.5K, DT1K
+    JT800, JT700, JT600, JT500, JT400
+    HT7.26K, HT6k, HT5k, HT4k, HT3k
+    WT15.88K, WT11.34K, WT9.08K, WT7.26K, WT5.45K
+
+Some events, such as the <a href="http://www.dailymail.co.uk/news/article-3671604/Couples-test-strength-marriages-2016-World-Wife-Carrying-Championships.html">Finnish Wife-Carrying championships</a>, are harder to standardise so will be left for a future version.
+
 The mile is special and of historic importance.  So, in a programme or set of entries, we suggest to allow
 
     MILE  - as it says.
