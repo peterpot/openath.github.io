@@ -124,13 +124,21 @@ For field events, there is usually a default weight for a given age group and ge
     HT7.26K, HT6k, HT5k, HT4k, HT3k
     WT15.88K, WT11.34K, WT9.08K, WT7.26K, WT5.45K
 
+Hurdles have adjustable heights, defined originally in 3 inch increments (but usually described in millimetres).  Usually, this does not need to be given, because it's a standard.  However, for some Masters and younger competitions, hurdles may be lowered.   If it is necesssary to disambuguate, we can use two digits for "feet and inches". This gives much simpler numbers than the metric equivalents.  For example
+
+    110H36 - 3'6" or 1.067 - normal mens' hurdle height
+    110H33 - 3'3" or 0.991 - used for some masters' competitions.
+
+
+
+
 Some events, such as the <a href="http://www.dailymail.co.uk/news/article-3671604/Couples-test-strength-marriages-2016-World-Wife-Carrying-Championships.html">Finnish Wife-Carrying championships</a>, are harder to standardise so will be left for a future version.
 
 The mile is special and of historic importance.  So, in a programme or set of entries, we suggest to allow
 
     MILE  - as it says.
 
-Moving onto road and cross country, we'd like to suggest a combination of a rough distance measure and a suffix which shows the units.  
+Moving onto road and cross country, we'd like to suggest an open-ended standard: a combination of a rough distance measure and a suffix which shows the units.  
 
     2K, 5k, 10K, 4.5K - distance in kilometers
     5M, 10M, 2.2M - distance in miles  (NOT metres!)
