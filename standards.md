@@ -239,3 +239,56 @@ England Athletics and European Athletics can fight it out for who gets EA.
 Peter Kennedy has bravely volunteered to maintain this data!
 
 
+# Vocabulary
+
+Here's our first start at a recommended vocabulary of field names.  In JSON, we have been recommended to use `camelCase` conventions, and - where it makes sense - to pick field names from <a href="http://schema.org/">schema.org</a>.
+
+## General personal information
+
+    givenName: first name for western languages
+    familyName: last name for western languages
+    birthDate: date is ISO format (1966-03-21)
+    gender:  M or F
+    nationality:   3-letter code (e.g. EST)
+    height:  height in cm
+    weight:  weight in kg
+    birthPlace:  text, town and country (e.g. "Tallinn, Estonia")
+
+## Within an athlete biography or summary
+    
+    personalBests: list of performances by discipline
+    seasonsBests: list of performances by discipline
+
+## Within a results or entries system
+
+    bib: the 'number' they wear, (integer or text?)
+    ageGroup:   group for this competition.   U14, SEN, V45 etc.
+    ageGender:   combined age group and gender code   (U13B, SM, M45)
+    category:  used for broader or different prize categories
+    tags:  short list of strings
+
+    secondClaim:  boolean, default false or absent.  Signifies an athlete whose primary club is elsewhere.  Use for HCAs in British League
+    nonScorer:  boolean, default false or absent.  This person may not score points.
+
+    rank: where they finished
+    points: numeric or None
+
+    indoor:  boolean, difault is false or absent
+    discipline:  standard "event code" e.g. 200, HJ, 3000SC
+    venue:  where it happened - town name
+    country: where it happened - country code
+
+    perf:  performance, as formatted text.  "9.58", "3:26.8", "75.83" etc.
+    wind:  true signifies > 2.0 but we don't know speed; or a number for the speed
+
+
+
+    compId:  competition ID within whatever system you are looking at.
+    athleteID:  likewise
+
+    otCompId:  OpenTrack's ID for the competition 
+    tilpaCompId: Tilastopaja's ID for the competition
+
+
+
+    
