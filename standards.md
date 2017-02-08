@@ -128,7 +128,7 @@ For field events, there is usually a default weight for a given age group and ge
 
 Hurdles have adjustable heights, defined originally in 3 inch increments (but usually described in millimetres).  Usually, this does not need to be given, because it's a standard.  However, for some Masters and younger competitions, hurdles may be lowered.   If it is necesssary to disambuguate, we can use two digits for "feet and inches". This gives much simpler numbers than the metric equivalents.  For example
 
-    110H36  - 3'6" or 1.067  - normal mens' hurdle height
+    110H36  - 3'6" or 1.067  - normal men's hurdle height
     110H33  - 3'3" or 0.991  - used for some masters' competitions.
 
 
