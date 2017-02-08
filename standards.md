@@ -38,7 +38,7 @@ If the 1976 Olympic Decathlon champion decides to make a comeback, we can discus
 
 Thus, if exchanging athlete data, we might have a JSON document like this...
 
-    {"first_name": "Fred", "last_name": "Bloggs", "gender": "M"}
+    {"firstName": "Fred", "lastName": "Bloggs", "gender": "M"}
 
 ..and in a spreadsheet, we would have a column with "M" or "F"
 
@@ -69,7 +69,7 @@ We aim to be guided by <a href="https://en.wikipedia.org/wiki/ISO_8601">ISO 8601
 Databases have rich ways to store dates, date-times and times, complete with time zone information.  In athletics this can be troublesome, unless you are very careful.  For example, you set up your county championships timetable in some detail in March, then the clocks change, and you find the computer assumed GMT when you entered in, and everyone shows up an hour off; or that you are advertising the wrong start time for an early-autumn cross country race.  (Yes, this has happened!)
 
     "2015-10-17"  - use for dates, the ISO standard.  (Excel will differ)
-    "14:35" - use for the start time of an event, for historic or programme purposes
+    "14:35"       - use for the start time of an event, for historic or programme purposes
 
 When describing programmes or sets of results, we recommend separating the dates and times. 
 
@@ -87,10 +87,10 @@ Times should be passed in a decimalized text format and interpreted as a number 
     9.58
     58.5
     63.5
-    1:03.5     - equivalent to 63.5, first digit assumed to be minutes
-    2:03   - assumed to be an 800m time of 2 minutes, and not a Marathon, because only one colon
-    2:02:57 - the marathon world record, two colons so contains hours
-    73:15 - a half marathon time, equivalent to 1:03:15
+    1:03.5   - equivalent to 63.5, first digit assumed to be minutes
+    2:03     - assumed to be an 800m time of 2 minutes, and not a Marathon, because only one colon
+    2:02:57  - the marathon world record, two colons so contains hours
+    73:15    - a half marathon time, equivalent to 1:03:15
 
 Distances for jumps and throws can be stored as decimal numbers.
 
@@ -108,13 +108,15 @@ If you are looking at a programme, the "U13 Girls High Jump first round, Sat 10:
 Our "first stab" is based on the codes from Power of Ten, which appear in the URL search parameters. However, we have introduced some slight changes.  In particular, we don't want the interpretation to depend on the case of a letter.  So 'm' meaning both Metre and Mile is dangerous.
 
 
-    HJ, PV, LJ, TJ, SP, DT, HT, JT, WT - field events
-    60,100,200,400,800,1500,3000,5000,10000 - track (and other distances for junior races).  Any raw number is assumed to be a number in metres
-    60H, 80H, 100H, 110H, 200H, 300H, 400H - number + 'H' denotes hurdles
-    2000SC, 3000SC - steeplechase
-    DEC, HEP, HEPI, PEN, PENWT  - multi-events.  Case variations acceptable. 
-    20KW, 50KW - walks
-    4x100, 4x400 - track relays.  
+    HJ, PV, LJ, TJ, SP, DT, HT, JT, WT               - field events
+    60, 100, 200, 400, 800, 1500, 3000, 5000, 10000  - track (and other distances for junior races)
+                                                     - Any raw number is assumed to be a number in metres
+
+    60H, 80H, 100H, 110H, 200H, 300H, 400H           - number + 'H' denotes hurdles
+    2000SC, 3000SC                                   - steeplechase
+    DEC, HEP, HEPI, PEN, PENWT                       - multi-events.  Case variations acceptable. 
+    20KW, 50KW                                       - walks
+    4x100, 4x400                                     - track relays.  
 
 For field events, there is usually a default weight for a given age group and gender, but we can indicate a specific weight of implement as follows.  (We followed Power of Ten, who use these for filter parameters in URLs).  
 
@@ -126,8 +128,8 @@ For field events, there is usually a default weight for a given age group and ge
 
 Hurdles have adjustable heights, defined originally in 3 inch increments (but usually described in millimetres).  Usually, this does not need to be given, because it's a standard.  However, for some Masters and younger competitions, hurdles may be lowered.   If it is necesssary to disambuguate, we can use two digits for "feet and inches". This gives much simpler numbers than the metric equivalents.  For example
 
-    110H36 - 3'6" or 1.067 - normal mens' hurdle height
-    110H33 - 3'3" or 0.991 - used for some masters' competitions.
+    110H36  - 3'6" or 1.067  - normal mens' hurdle height
+    110H33  - 3'3" or 0.991  - used for some masters' competitions.
 
 
 
@@ -140,12 +142,12 @@ The mile is special and of historic importance.  So, in a programme or set of en
 
 Moving onto road and cross country, we'd like to suggest an open-ended standard: a combination of a rough distance measure and a suffix which shows the units.  
 
-    2K, 5k, 10K, 4.5K - distance in kilometers
-    5M, 10M, 2.2M - distance in miles  (NOT metres!)
-    MAR - marathon
-    HM - half marathon
+    2K, 5k, 10K, 4.5K  - distance in kilometers
+    5M, 10M, 2.2M      - distance in miles  (NOT metres!)
+    MAR                - marathon
+    HM                 - half marathon
     
-    5MXC - any of the above plus "XC" denotes cross country.
+    5MXC               - any of the above plus "XC" denotes cross country.
 
 It is not necessary to add an XC suffix; this depends on the context.  
 
@@ -225,8 +227,8 @@ As a starting point, we have given three letter codes to 40 clubs in the Surrey 
 
 At a technical level, we feel we could allow codes of up to 5 characters.  (3 is quite nice for results formatting).  They should NOT include "/" or "&", as these will cause trouble in URL parameters.  However, they may offer a "display alternative" formatted any way they like.
 
-    /rankings_search?club=HW   - GOOD
-    /rankings_search?club=H/W   - BAD, needs escaping
+    /rankings_search?club=HW     - GOOD
+    /rankings_search?club=H/W    - BAD, needs escaping
     /rankings_search?club=TH&H   - BAD, needs escaping, & would mean a new parameter
 
 
@@ -245,50 +247,46 @@ Here's our first start at a recommended vocabulary of field names.  In JSON, we 
 
 ## General personal information
 
-    givenName: first name for western languages
-    familyName: last name for western languages
-    birthDate: date is ISO format (1966-03-21)
-    gender:  M or F
-    nationality:   3-letter code (e.g. EST)
-    height:  height in cm
-    weight:  weight in kg
-    birthPlace:  text, town and country (e.g. "Tallinn, Estonia")
+    givenName:    first name for western languages
+    familyName:   last name for western languages
+    birthDate:    date is ISO format (1966-03-21)
+    gender:       M or F
+    nationality:  3-letter code (e.g. EST)
+    height:       height in cm
+    weight:       weight in kg
+    birthPlace:   text, town and country (e.g. "Tallinn, Estonia")
 
 ## Within an athlete biography or summary
     
-    personalBests: list of performances by discipline
-    seasonsBests: list of performances by discipline
+    personalBests:  list of performances by discipline
+    seasonsBests:   list of performances by discipline
 
 ## Within a results or entries system
 
-    bib: the 'number' they wear, (integer or text?)
-    ageGroup:   group for this competition.   U14, SEN, V45 etc.
-    ageGender:   combined age group and gender code   (U13B, SM, M45)
-    category:  used for broader or different prize categories
-    tags:  short list of strings
+    bib:          the 'number' they wear (string to allow for letters and numbers)
+    ageGroup:     group for this competition (e.g. U14, SEN, V45)
+    ageGender:    combined age group and gender code (e.g. U13B, SM, M45)
+    category:     used for broader or different prize categories
+    tags:         short list of strings
 
-    secondClaim:  boolean, default false or absent.  Signifies an athlete whose primary club is elsewhere.  Use for HCAs in British League
-    nonScorer:  boolean, default false or absent.  This person may not score points.
+    secondClaim:  boolean, default false or absent.
+                  Signifies an athlete whose primary club is elsewhere.
+                  Use for HCAs in British League
+    nonScorer:    boolean, default false or absent.  This person may not score points
 
-    rank: where they finished
-    points: numeric or None
+    rank:         where they finished
+    points:       numeric or None
 
-    indoor:  boolean, difault is false or absent
-    discipline:  standard "event code" e.g. 200, HJ, 3000SC
-    venue:  where it happened - town name
-    country: where it happened - country code
+    indoor:       boolean, default is false or absent
+    discipline:   standard "event code" e.g. 200, HJ, 3000SC
+    venue:        where it happened - town/track name
+    country:      where it happened - country code
 
-    perf:  performance, as formatted text.  "9.58", "3:26.8", "75.83" etc.
-    wind:  true signifies > 2.0 but we don't know speed; or a number for the speed
+    perf:         performance, as formatted text (e.g. "9.58", "3:26.8", "75.83")
+    wind:         true signifies > 2.0 but we don't know speed; or a number for the speed
 
+    compId:       competition ID within whatever system you are looking at
+    athleteID:    athlete ID within whatever system you are looking at
 
-
-    compId:  competition ID within whatever system you are looking at.
-    athleteID:  likewise
-
-    otCompId:  OpenTrack's ID for the competition 
-    tilpaCompId: Tilastopaja's ID for the competition
-
-
-
-    
+    otCompId:     OpenTrack's ID for the competition
+    tilpaCompId:  Tilastopaja's ID for the competition
