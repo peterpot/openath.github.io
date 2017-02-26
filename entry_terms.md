@@ -20,7 +20,7 @@ Our entry system is being used more and more widely, with 5 counties and a numbe
 
 Background to the service
 -----------
-Our hope is to make athletics and running events more fun and easier to manage, thus allowing the sport to grow.  The first step to a well run competition is to take entries quickly and accurately, with a system that understands the sport.
+Our hope is to make athletics and running events more fun and easier to manage, thus allowing the sport to grow.  The first step to a well run competition is to take entries quickly and accurately, with a system that understands the sport.  Athletics is complicated, with many different types of competitions and rules, and the development is an ongoing journey.
 
 At the time being, this is essentially a not-for-profit "public service".  It has been developed so far through grants and contracts with governing bodies.   The total revenue we obtain from most athletics meetings is between £50 and £200.  For this service to grow, we cannot provide personalised support to individual competitions; instead we're trying to put our time into a better automated system which you can operate yourself.  
 
@@ -37,8 +37,13 @@ Funds are transferred to your own bank account at a frequency you can set in the
 
 These prices were chosen to align with the major online entry providers working at road races.  However, road races often have thousands of entries and costs tens of pounds
 
+Skills required on your side
+-----
 
-Initial setup
+We can support a number of users from each host club or association; it's good to have more than one in case you are busy or away.
+
+We assume you are personally comfortable with technology, including spreadsheets and browsers, with good attention to detail; and that you will be around and have time to respond to enquiries about your competition.   If this is not the case, you may want to discuss an enhanced service where we charge a bit more and can be the "help desk" - see below.
+
 -------
 We do not yet have a completely self-operated "setup process", so for now (spring 2017) we will assist with the setup of your first meeting.  You will need to do the following things
  1. sign up for an account on <a href="http://entries.opentrack.run/">the entry system</a>
@@ -47,7 +52,6 @@ We do not yet have a completely self-operated "setup process", so for now (sprin
  1. review and test the entry process on a separate test server, before it goes live
  1. undergo a short briefing, via a shared screen.
 
-We assume you are personally comfortable with technology, including spreadsheets and browsers.  If this is not the case, it may be worth finding someone else in your club who is.   We are happy to support 2-3 users in each club, as long as we can brief you at once.
 
 Our intention is that later this summer, you will be able to copy previous "meeting specs", or copy from templates, so that going forwards you can set up your own competitions, test them and put them "live" at any time, without even needing our help.  Several of our key meeting organisers are doing this already.
 
