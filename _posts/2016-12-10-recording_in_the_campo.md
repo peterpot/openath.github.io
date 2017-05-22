@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recording in the campo.
+title: Recording in the campo
 author: Andy Weir
 ---
 
