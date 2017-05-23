@@ -8,4 +8,4 @@ We worked with six counties this year in the lead up to their biggest events of 
 
 Have a look for yourself on our entries site,
 
-<a href="https/entries.opentrack.run" > </a>
+"https/entries.opentrack.run" 
